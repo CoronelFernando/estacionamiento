@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [2018-11-14 03:30:26] production.ERROR: RuntimeException: The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths. in C:\xampp7\htdocs\estacionamiento\vendor\laravel\framework\src\Illuminate\Encryption\Encrypter.php:43
 Stack trace:
 #0 C:\xampp7\htdocs\estacionamiento\vendor\laravel\framework\src\Illuminate\Encryption\EncryptionServiceProvider.php(27): Illuminate\Encryption\Encrypter->__construct('', 'AES-256-CBC')
