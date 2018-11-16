@@ -11,9 +11,6 @@
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
-});*/
-
-//Pagina principal
-route::get('/', 'CajonControlller@index');
+});
