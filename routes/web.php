@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+//Pagina principal
+Route::get('/', 'PrincipalController@index');
+Route::get('home', 'PrincipalController@index');
+
+//Pagina de estadisticas
+Route::get('estadisticas', 'EstadisticasController@index');

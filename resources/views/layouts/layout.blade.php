@@ -10,10 +10,9 @@
     </header>
 
     @section('content')
-    <div class="">
+    <div class="container-fluid">
       @yield('content')
     </div>
-    @endsection
 
     <footer>
           @include('theme.footer')
