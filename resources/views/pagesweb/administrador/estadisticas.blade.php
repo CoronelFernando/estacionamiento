@@ -35,6 +35,11 @@
       </table>
     </div>
 
+    <div class="row text-right">
+      <div class="" id="barra"></div>
+        <?= $grafica->render("ColumnChart", "Finances", "barra"); ?>
+    </div>
+
 <script type="text/javascript" src="js/global.js"></script>
 <script type="text/javascript" src="js/global/estadisticas.js"></script>
 <script type="text/javascript">

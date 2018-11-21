@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class estadisticasCajones extends Model
+class EstadisticasCajones extends Model
 {
     protected $table = "estadisticasCajones";
     protected $primaryKey = "estCaj_id";
