@@ -1,6 +1,20 @@
 <div class="container-fluid">
-  <div class="col-sm-4">
-    <label>Derechos reservados@2018</label>
+  <div class="col-sm-12">
+    <div class="col-sm-12">
+      <label>Lider empresarial: Hokage</label>
+    </div>
+    <div class="col-sm-12">
+      <label>RH/Contaduria: Tsunade</label>
+    </div>
+    <div class="col-sm-12">
+      <label>Administracion: Jiraiya</label>
+    </div>
+    <div class="col-sm-4">
+      <label>Director general: Orochimaru</label>
+    </div>
+    <div class="col-sm-8 text-right">
+      <label class="">Derechos reservados@2018</label>
+    </div>
   </div>
 </div>
 

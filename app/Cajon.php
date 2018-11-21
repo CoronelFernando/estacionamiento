@@ -9,5 +9,5 @@ class Cajon extends Model
   protected $table = "cajones";
   protected $primaryKey = "caj_id";
   public $incrementing = true;
-  protected $filltable = ["caj_descripcion", "caj_status", "caj_seccion", "updated_at", "created_at"];
+  protected $filltable = ["caj_descripcion", "caj_seccion_id", "caj_status_id", "updated_at", "created_at"];
 }

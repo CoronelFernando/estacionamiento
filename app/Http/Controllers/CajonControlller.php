@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
 use DB;
 use App\Cajon;
 
@@ -36,13 +37,25 @@ class CajonControlller extends Controller
   }
 
   public function cajon($id){
-    $cajon = Cajon::select('caj_id', 'caj_descripcion', 'caj_status', 'caj_seccion')
+    $cajon = Cajon::select('caj_id', 'caj_descripcion', 'caj_seccion_id', 'caj_status_id')
     -> WHERE('cajones.caj_id', $id);
     return Datatables::of($cajon)-make(true);
   }
 
-  public function allCajones(){
-    $cajones = Cajon::select('caj_id', 'caj_descripcion', 'caj_status', 'caj_seccion');
-    return Datatables::of($cajones)-make(true);
+  public function allCajones(Request $request){
+    if($request['seccion'] != ""){
+      $cajones = Cajon::select('caj_id', 'caj_descripcion', 'sec_id', 'sec_descripcion', 'est_id', 'est_descripcion')
+      -> JOIN('secciones','cajones.caj_seccion_id','=','secciones.sec_id')
+      -> JOIN('estatus','cajones.caj_status_id','=','estatus.est_id')
+      -> where('caj_seccion_id', $request['seccion'])
+      -> where('caj_status_id', $request['status'])->get()->toJson();
+    }else{
+      $cajones = Cajon::select('caj_id', 'caj_descripcion', 'sec_id', 'sec_descripcion', 'est_id', 'est_descripcion')
+      -> JOIN('secciones','cajones.caj_seccion_id','=','secciones.sec_id')
+      -> JOIN('estatus','cajones.caj_status_id','=','estatus.est_id')
+      -> WHERE('caj_status_id', $request['status'])->get()->toJson();
+    }
+
+    return $cajones;
   }
 }

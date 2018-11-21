@@ -6,12 +6,16 @@
   <body>
     <header>
       @include('theme.header')
-      @include('theme.sidebar')
+      <div id="alerta"></div>
     </header>
 
-    @section('content')
-    <div class="container-fluid">
-      @yield('content')
+    <div class="col-sm-2">
+      @include('theme.sidebar')
+    </div>
+    <div class="col-sm-10">
+      <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
+      @section('content')
+        @yield('content')
     </div>
 
     <footer>

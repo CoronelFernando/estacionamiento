@@ -21,3 +21,7 @@ Route::get('home', 'PrincipalController@index');
 
 //Pagina de estadisticas
 Route::get('estadisticas', 'EstadisticasController@index');
+Route::post('estadisticas/DesplegarCajones', 'CajonControlller@allCajones');
+
+//Graficas
+Route::get('estadisticas/autosPorHora', 'EstadisticasController@autosPorHora');
