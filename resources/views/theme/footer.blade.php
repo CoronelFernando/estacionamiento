@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="col-sm-12">
+  <div class="col-sm-12" style="background-color:#f0f0f0; color: black;" >
     <div class="col-sm-12">
       <label>Lider empresarial: Hokage</label>
     </div>
