@@ -1,4 +1,4 @@
-<div class="container-fluid" style="background-color:#b4b4b4; color: #3c3c3c;  ">
+<div class="container-fluid" style="background-color:#1d2323; color: White;  ">
   <div class="col-sm-10" >
     <div class="col-sm-12">
       <img src="picas.jpg" width="40px" height="50px" class="rounded"  alt="Picas" >
