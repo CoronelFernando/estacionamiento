@@ -13,9 +13,9 @@
             @endforeach
           </select>
           <label class="text-left">Seleccione grafica:</label>
-          <select name="selGrafica" id="selGrafica">
+          <select name="selGrafica" id="selGrafica" onchange="desplegarGraficas(this)">
             <option disabled selected>Seleccione Grafica</option>
-            <option value="1">Tabla: Estado de cajones</option>
+            <option value="1">Todos</option>
             <option value="2">Estadisticas: lugares ocupados/Hora</option>
             <option value="3">Estadisticas: lugares Desocupados/Hora</option>
           </select>
@@ -36,8 +36,10 @@
     </div>
 
     <div class="row text-right">
-      <div class="" id="barra"></div>
-        <?= $grafica->render("ColumnChart", "Finances", "barra"); ?>
+      <div class="" id="barraLlena"></div>
+        <?= $grafica->render("ColumnChart", "Cajones", "barraLlena"); ?>
+        <div class="" id="barraVacia"></div>
+
     </div>
 
 <script type="text/javascript" src="js/global.js"></script>
