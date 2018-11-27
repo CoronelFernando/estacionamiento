@@ -35,11 +35,11 @@
       </table>
     </div>
 
-    <div class="row text-right">
+    <div class="">
       <div class="" id="barraLlena"></div>
         <?= $grafica->render("ColumnChart", "Cajones", "barraLlena"); ?>
-        <div class="" id="barraVacia"></div>
 
+        <div class="" id="barraVacia"></div>
     </div>
 
 <script type="text/javascript" src="js/global.js"></script>

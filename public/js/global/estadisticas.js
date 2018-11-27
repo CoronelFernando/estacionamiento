@@ -63,14 +63,15 @@ function fillTabla(jsonData){
 //@element recibe como parametro una opcion de un select
 function desplegarGraficas(element){
   if(element != undefined){
-    if(element.vaue == 1)
-    barraLlena.setAttribute('visible', 'visible');
-    barraVacia.setAttribute('visible', 'visible');
-  }else if(element.vaue == 2) {
-    barraLlena.setAttribute('visible', 'visible');
-    barraVacia.setAttribute('visible', 'hidden');
-  }else if(element.vaue == 3) {
-    barraLlena.setAttribute('visible', 'hidden');
-    barraVacia.setAttribute('visible', 'visible');
+    if(element.value == 1){
+      barraLlena.style.display = 'block';
+      barraVacia.style.display = 'block';
+    }else if(element.value == 2) {
+      barraLlena.style.display = 'block';
+      barraVacia.style.display = 'none';
+    }else if(element.value == 3) {
+      barraLlena.style.display = 'none';
+      barraVacia.style.display = 'block';
+    }
   }
 }
