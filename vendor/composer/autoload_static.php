@@ -78,6 +78,7 @@ class ComposerStaticInit6290d479cc366fc88f94e2d11f192064
         'K' => 
         array (
             'Khill\\Lavacharts\\' => 17,
+            'Khill\\FontAwesome\\' => 18,
         ),
         'J' => 
         array (
@@ -223,6 +224,10 @@ class ComposerStaticInit6290d479cc366fc88f94e2d11f192064
         array (
             0 => __DIR__ . '/..' . '/khill/lavacharts/src',
         ),
+        'Khill\\FontAwesome\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/khill/fontawesomephp/src',
+        ),
         'JakubOnderka\\PhpConsoleHighlighter\\' => 
         array (
             0 => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src',
@@ -297,7 +302,7 @@ class ComposerStaticInit6290d479cc366fc88f94e2d11f192064
         'App\\Cajon' => __DIR__ . '/../..' . '/app/Cajon.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\EstadisticaReservado' => __DIR__ . '/../..' . '/app/EstadisticaReservado.php',
-        'App\\EstadisticasCajones' => __DIR__ . '/../..' . '/app/estadisticasCajones.php',
+        'App\\EstadisticasCajones' => __DIR__ . '/../..' . '/app/EstadisticasCajones.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -1600,6 +1605,19 @@ class ComposerStaticInit6290d479cc366fc88f94e2d11f192064
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/Highlighter.php',
         'JsonSerializable' => __DIR__ . '/..' . '/nesbot/carbon/src/JsonSerializable.php',
+        'Khill\\FontAwesome\\Exceptions\\CollectionIconException' => __DIR__ . '/..' . '/khill/fontawesomephp/src/Exceptions/CollectionIconException.php',
+        'Khill\\FontAwesome\\Exceptions\\IncompleteListException' => __DIR__ . '/..' . '/khill/fontawesomephp/src/Exceptions/IncompleteListException.php',
+        'Khill\\FontAwesome\\Exceptions\\IncompleteStackException' => __DIR__ . '/..' . '/khill/fontawesomephp/src/Exceptions/IncompleteStackException.php',
+        'Khill\\FontAwesome\\Exceptions\\InvalidTransformationClass' => __DIR__ . '/..' . '/khill/fontawesomephp/src/Exceptions/InvalidTransformationClass.php',
+        'Khill\\FontAwesome\\FontAwesome' => __DIR__ . '/..' . '/khill/fontawesomephp/src/FontAwesome.php',
+        'Khill\\FontAwesome\\FontAwesomeHtmlEntity' => __DIR__ . '/..' . '/khill/fontawesomephp/src/FontAwesomeHtmlEntity.php',
+        'Khill\\FontAwesome\\FontAwesomeLayers' => __DIR__ . '/..' . '/khill/fontawesomephp/src/FontAwesomeLayers.php',
+        'Khill\\FontAwesome\\FontAwesomeList' => __DIR__ . '/..' . '/khill/fontawesomephp/src/FontAwesomeList.php',
+        'Khill\\FontAwesome\\FontAwesomeStack' => __DIR__ . '/..' . '/khill/fontawesomephp/src/FontAwesomeStack.php',
+        'Khill\\FontAwesome\\FontAwesomeText' => __DIR__ . '/..' . '/khill/fontawesomephp/src/FontAwesomeText.php',
+        'Khill\\FontAwesome\\Laravel\\FontAwesomeFacade' => __DIR__ . '/..' . '/khill/fontawesomephp/src/Laravel/FontAwesomeFacade.php',
+        'Khill\\FontAwesome\\Laravel\\FontAwesomeServiceProvider' => __DIR__ . '/..' . '/khill/fontawesomephp/src/Laravel/FontAwesomeServiceProvider.php',
+        'Khill\\FontAwesome\\Support\\Psr4Autoloader' => __DIR__ . '/..' . '/khill/fontawesomephp/src/Support/Psr4Autoloader.php',
         'Khill\\Lavacharts\\Charts\\AreaChart' => __DIR__ . '/..' . '/khill/lavacharts/src/Charts/AreaChart.php',
         'Khill\\Lavacharts\\Charts\\BarChart' => __DIR__ . '/..' . '/khill/lavacharts/src/Charts/BarChart.php',
         'Khill\\Lavacharts\\Charts\\CalendarChart' => __DIR__ . '/..' . '/khill/lavacharts/src/Charts/CalendarChart.php',
@@ -2649,7 +2667,6 @@ class ComposerStaticInit6290d479cc366fc88f94e2d11f192064
         'Psr\\Log\\NullLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/NullLogger.php',
         'Psr\\Log\\Test\\DummyTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
         'Psr\\Log\\Test\\LoggerInterfaceTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
-        'Psr\\Log\\Test\\TestLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/TestLogger.php',
         'Psy\\CodeCleaner' => __DIR__ . '/..' . '/psy/psysh/src/CodeCleaner.php',
         'Psy\\CodeCleaner\\AbstractClassPass' => __DIR__ . '/..' . '/psy/psysh/src/CodeCleaner/AbstractClassPass.php',
         'Psy\\CodeCleaner\\AssignThisVariablePass' => __DIR__ . '/..' . '/psy/psysh/src/CodeCleaner/AssignThisVariablePass.php',

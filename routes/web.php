@@ -16,8 +16,10 @@
 });*/
 
 //Pagina principal
-Route::get('/', 'PrincipalController@index');
-Route::get('home', 'PrincipalController@index');
+//Route::get('/', 'PrincipalController@index');
+Route::get('/', 'EstadisticasController@index');
+//Route::get('home', 'PrincipalController@index');
+Route::get('home', 'EstadisticasController@index');
 
 //Pagina de estadisticas
 Route::get('estadisticas', 'EstadisticasController@index');
@@ -25,3 +27,5 @@ Route::post('estadisticas/DesplegarCajones', 'CajonControlller@allCajones');
 
 //Graficas
 Route::get('estadisticas/autosPorHora', 'EstadisticasController@autosPorHora');
+Route::get('estadisticas/vaciosPorHora', 'EstadisticasController@vaciosPorHora');
+//Route::get('estadisticas/tablaCajones', 'CajonControlller@tablaCajones');

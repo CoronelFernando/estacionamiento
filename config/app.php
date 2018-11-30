@@ -178,7 +178,10 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         //Graficas
-        Khill\Lavacharts\Laravel\LavachartsServiceProvider::class
+        Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
+
+        //fontawesomephp
+        //Khill\Fontawesome\FontAwesomeServiceProvider::class,
 
     ],
 
@@ -230,7 +233,10 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         //charts
-        'Lava' => Khill\Lavacharts\Laravel\LavachartsFacade::class,
+        //'Lava' => Khill\Lavacharts\Laravel\LavachartsFacade::class,
+
+        //FontAwesome
+        //'FA' => Khill\Fontawesome\FontAwesome::class,
 
     ],
 

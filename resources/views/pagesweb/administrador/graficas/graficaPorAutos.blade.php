@@ -1,2 +1,2 @@
-<div class="" id="barra"></div>
-  <?= $grafica->render("ColumnChart", "Cajones", "barra"); ?>
+<div class="" id="barraLlena"></div>
+<?= $grafica->render("ColumnChart", "CajonesLlenos", "barraLlena"); ?>

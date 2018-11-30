@@ -47,15 +47,20 @@ class CajonControlller extends Controller
       $cajones = Cajon::select('caj_id', 'caj_descripcion', 'sec_id', 'sec_descripcion', 'est_id', 'est_descripcion')
       -> JOIN('secciones','cajones.caj_seccion_id','=','secciones.sec_id')
       -> JOIN('estatus','cajones.caj_status_id','=','estatus.est_id')
-      -> where('caj_seccion_id', $request['seccion'])
-      -> where('caj_status_id', $request['status'])->get()->toJson();
+      -> where('caj_seccion_id', $request['seccion'])->get()->toJson();
+      //-> where('caj_status_id', $request['status'])->get()->toJson();
     }else{
       $cajones = Cajon::select('caj_id', 'caj_descripcion', 'sec_id', 'sec_descripcion', 'est_id', 'est_descripcion')
       -> JOIN('secciones','cajones.caj_seccion_id','=','secciones.sec_id')
-      -> JOIN('estatus','cajones.caj_status_id','=','estatus.est_id')
-      -> WHERE('caj_status_id', $request['status'])->get()->toJson();
+      -> JOIN('estatus','cajones.caj_status_id','=','estatus.est_id')->get()->toJson();
+      //-> WHERE('caj_status_id', $request['status'])->get()->toJson();
     }
 
     return $cajones;
+  }
+  public function tablaCajones(){
+    $secciones = DB::table('secciones')->get();
+
+    return view('pagesweb/administrador/graficas/tablaCajones', ['secciones' => $secciones]);
   }
 }

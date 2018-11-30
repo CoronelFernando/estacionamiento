@@ -1,10 +1,10 @@
-<div class="container-fluid" style="background-color:#1d2323; color: White;  ">
+<div class="row" style="background-color:#1d2323; color: White;  ">
   <div class="col-sm-10" >
     <div class="col-sm-12">
-      <img src="picas.jpg" width="40px" height="50px" class="rounded"  alt="Picas" >
-      <label class="">Estacionamiento intelingente</label>
+      <a href="{{url('estadisticas')}}"><img src="image/smartparking.png" width="70px" height="70px" class="rounded"  alt="Picas" ></a>
+       <label style="font-size: 20pt;">Estacionamiento intelingente</label>
   </div>
 </div>
 <div class="col-sm-2">
-    <h5>Nombre:Admin</h5><h5>Sesion:Admin  </h5>
+    <h4>Nombre: {{$usuarios[3]->usu_nombre}}</h4><h4>Matricula: {{$usuarios[0]->usu_matricula}} </h4>
 </div>

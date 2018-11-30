@@ -1,5 +1,5 @@
-<div class="container-fluid">
-  <div class="col-sm-12" style="background-color:#e0e0ec; color: black;" >
+
+  <div class="col-sm-12" style="background-color:#e0e0ec; color: black; width:100%;" >
     <div class="col-sm-12">
       <label>Lider empresarial: Hokage</label>
     </div>
@@ -16,7 +16,6 @@
       <label class="">Derechos reservados@2018</label>
     </div>
   </div>
-</div>
 
 <!--script-->
 <script src="{{url('js/app.js')}}"></script>

@@ -2,14 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     @include('theme.head')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </head>
   <body>
-    <header>
+    <header class="row" style="width:100%">
       @include('theme.header')
       <div id="alerta"></div>
     </header>
 
-    <div class="col-sm-2">
+    <div class="col-sm-2" style="height:600px;  background-color: #5c636e;">
       @include('theme.sidebar')
     </div>
     <div class="col-sm-10">
@@ -18,7 +19,7 @@
         @yield('content')
     </div>
 
-    <footer>
+    <footer class="row" style="width:100%">
           @include('theme.footer')
     </footer>
 
