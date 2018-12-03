@@ -10,7 +10,7 @@
       <div id="alerta"></div>
     </header>
 
-    <div class="col-sm-2" style="height:600px;  background-color: #5c636e;">
+    <div class="col-sm-2" style="height:500px;  background-color: #5c636e;">
       @include('theme.sidebar')
     </div>
     <div class="col-sm-10">
@@ -19,7 +19,7 @@
         @yield('content')
     </div>
 
-    <footer class="row" style="width:100%">
+    <footer>
           @include('theme.footer')
     </footer>
 

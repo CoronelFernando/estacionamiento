@@ -24,8 +24,12 @@ Route::get('home', 'EstadisticasController@index');
 //Pagina de estadisticas
 Route::get('estadisticas', 'EstadisticasController@index');
 Route::post('estadisticas/DesplegarCajones', 'CajonControlller@allCajones');
+Route::post('estadisticas/numeroOcupados', 'EstadisticasController@desplegarNumeroOcupados');
 
 //Graficas
 Route::get('estadisticas/autosPorHora', 'EstadisticasController@autosPorHora');
 Route::get('estadisticas/vaciosPorHora', 'EstadisticasController@vaciosPorHora');
-//Route::get('estadisticas/tablaCajones', 'CajonControlller@tablaCajones');
+Route::get('estadisticas/areaChart', 'EstadisticasController@areaChart');
+
+Route::get('historial', 'HistorialController@index');
+Route::post('historial/allHistorial', 'HistorialController@showHistorial');

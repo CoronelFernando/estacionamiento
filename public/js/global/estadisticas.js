@@ -1,8 +1,13 @@
-var theadEstCaj = document.getElementById('dtestadisticasCajon').children[1];
-var tbodyEstCaj = document.getElementById('dtestadisticasCajon').children[2];
-var barraLlena = document.getElementById('barraLlena'); var barraVacia = document.getElementById('barraVacia');
-barraLlena.style.display = 'none'; //barraVacia.style.display = 'none';
+//TABLA
+var theadEstCaj = document.getElementById('dtestadisticasCajon').children[1]; var tbodyEstCaj = document.getElementById('dtestadisticasCajon').children[2];
 var selectGrafica = document.getElementById('selGrafica');
+//GRAFICAS
+var barraLlena = document.getElementById('barraLlena'); var barraVacia = document.getElementById('barraVacia');
+var areaChart = document.getElementById('areaChart');
+barraLlena.style.display = 'none'; //barraVacia.style.display = 'none';
+
+var inputSearch = document.getElementById('txtsearchCajon'); var lblOcupadosNumero = document.getElementById('lblOcupadosNumero');
+var lblOcupadosHora = document.getElementById('lblOcupadosHora');
 
 function loadDocument(){
   desplegarCajones();
@@ -10,16 +15,20 @@ function loadDocument(){
     //if(selectGrafica.value == 2)
     $('#barraLlena').load('estadisticas/autosPorHora');//actualizas el div
     //if(selectGrafica.value == 3)
-    $('#barraVacia').load('estadisticas/vaciosPorHora');//actualizas el div
+    //$('#barraVacia').load('estadisticas/vaciosPorHora');//actualizas el div
+    $('#areaChart').load('estadisticas/areaChart');//actualizas el div
     //$('#tbodyEstadisticas').load('estadisticas/tablaCajones');
   }, 5000 );
-    window.setInterval("desplegarCajones()", 5000);
+    window.setInterval("desplegarCajones()", 1000);
+    window.setInterval("desplegarNumeroOcupados()", 1000);
 }
 
 function desplegarCajones(select){
   var formData = new FormData();
   if(select != undefined) formData.append('seccion', select.value);
   else formData.append('seccion', "");
+  if(inputSearch != '') formData.append('cajon', inputSearch.value);
+  else formData.append('cajon', "");
   formData.append('status', "");
   formData.append('_token', token);
 
@@ -75,31 +84,29 @@ function desplegarGraficas(element){
   if(element != undefined){
     if(element.value == 1){
       barraLlena.style.display = 'block';
-      barraVacia.style.display = 'block';
+      //barraVacia.style.display = 'block';
+      areaChart.style.display = 'block';
     }else if(element.value == 2) {
       barraLlena.style.display = 'block';
-      barraVacia.style.display = 'none';
+      //barraVacia.style.display = 'none';
+      areaChart.style.display = 'none';
     }else if(element.value == 3) {
       barraLlena.style.display = 'none';
-      barraVacia.style.display = 'block';
+      //barraVacia.style.display = 'block';
+      areaChart.style.display = 'block';
     }
   }
 }
 
-/*function Carga(url,id){
-var objeto = new XMLHttpRequest();
-objeto.onreadystatechange=function()
-{
-cargarobjeto(objeto,id)
+function desplegarNumeroOcupados(){
+  var formData = new FormData();
+  formData.append('_token', token);
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'estadisticas/numeroOcupados');
+  xhr.addEventListener('load', function(){
+    var jsonData = JSON.parse(xhr.responseText);
+    lblOcupadosNumero.textContent = '#' + jsonData[0].estCaj_cajon_id;
+    lblOcupadosHora.textContent = jsonData[0].estCaj_hora;
+  });
+  xhr.send(formData);
 }
-objeto.open('GET', 'estadisticas/autosPorHora', true)
-objeto.send(null)
-}
-
-function cargarobjeto(objeto, id)
-{
-if (objeto.readyState == 4)
-document.getElementById(id).innerHTML=objeto.responseText
-else
-document.getElementById(id).innerHTML='load';
-}*/

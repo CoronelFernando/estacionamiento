@@ -49,7 +49,12 @@ class CajonControlller extends Controller
       -> JOIN('estatus','cajones.caj_status_id','=','estatus.est_id')
       -> where('caj_seccion_id', $request['seccion'])->get()->toJson();
       //-> where('caj_status_id', $request['status'])->get()->toJson();
-    }else{
+    }else if($request['cajon'] != ""){
+      $cajones = Cajon::select('caj_id', 'caj_descripcion', 'sec_id', 'sec_descripcion', 'est_id', 'est_descripcion')
+      -> JOIN('secciones','cajones.caj_seccion_id','=','secciones.sec_id')
+      -> JOIN('estatus','cajones.caj_status_id','=','estatus.est_id')
+      -> where('caj_id', $request['cajon'])->get()->toJson();
+    } else{
       $cajones = Cajon::select('caj_id', 'caj_descripcion', 'sec_id', 'sec_descripcion', 'est_id', 'est_descripcion')
       -> JOIN('secciones','cajones.caj_seccion_id','=','secciones.sec_id')
       -> JOIN('estatus','cajones.caj_status_id','=','estatus.est_id')->get()->toJson();

@@ -1,16 +1,16 @@
 
   <div class="col-sm-12" style="background-color:#e0e0ec; color: black; width:100%;" >
     <div class="col-sm-12">
-      <label>Lider empresarial: Hokage</label>
+      <label>Lider empresarial: Carlos Rabago Cardona</label>
     </div>
     <div class="col-sm-12">
-      <label>RH/Contaduria: Tsunade</label>
+      <label>RH/Contaduria: Mirna Raquel Valdivia martinez</label>
     </div>
     <div class="col-sm-12">
-      <label>Administracion: Jiraiya</label>
+      <label>Administracion: Pablo Martinez Espinoza</label>
     </div>
     <div class="col-sm-4">
-      <label>Director general: Orochimaru</label>
+      <label>Director general: Fernando Coronel Salinas</label>
     </div>
     <div class="col-sm-8 text-right">
       <label class="">Derechos reservados@2018</label>
