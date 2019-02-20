@@ -6,5 +6,5 @@
   </div>
 </div>
 <div class="col-sm-2">
-    <h4>Nombre: {{$usuarios[3]->usu_nombre}}</h4><h4>Matricula: {{$usuarios[0]->usu_matricula}} </h4>
+    <h4>Matricula: {{$usuarios[0]->usu_matricula}} </h4>
 </div>

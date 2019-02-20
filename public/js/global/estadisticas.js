@@ -11,16 +11,16 @@ var lblOcupadosHora = document.getElementById('lblOcupadosHora');
 
 function loadDocument(){
   desplegarCajones();
-  var refreshId =  setInterval( function(){
+  /*var refreshId =  setInterval( function(){
     //if(selectGrafica.value == 2)
     $('#barraLlena').load('estadisticas/autosPorHora');//actualizas el div
     //if(selectGrafica.value == 3)
     //$('#barraVacia').load('estadisticas/vaciosPorHora');//actualizas el div
     $('#areaChart').load('estadisticas/areaChart');//actualizas el div
     //$('#tbodyEstadisticas').load('estadisticas/tablaCajones');
-  }, 5000 );
-    window.setInterval("desplegarCajones()", 1000);
-    window.setInterval("desplegarNumeroOcupados()", 1000);
+  }, 5000 );*/
+    //window.setInterval("desplegarCajones()", 1000);
+    //window.setInterval("desplegarNumeroOcupados()", 1000);
 }
 
 function desplegarCajones(select){
