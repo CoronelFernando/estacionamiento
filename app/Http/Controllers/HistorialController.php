@@ -16,7 +16,7 @@ class HistorialController extends Controller
     $cajones = DB::table('cajones')->get();
     $secciones = DB::table('secciones')->get();
     $estatus = DB::table('estatus')->get();
-    return view('pagesweb/administrador/historial', ['usuarios' => $usuarios, 'cajones' => $cajones,
+    return view('pagesweb/administrador/history', ['usuarios' => $usuarios, 'cajones' => $cajones,
       'secciones' => $secciones, 'estatus' => $estatus]);
   }
 

@@ -16,7 +16,7 @@ class EstadisticasController extends Controller
     $usuarios = DB::table('usuarios')->get();
     
 
-  return view('pagesweb/administrador/estadisticas', ['secciones' => $secciones, 'usuarios' => $usuarios ]);
+  return view('pagesweb/administrador/statistic', ['secciones' => $secciones, 'usuarios' => $usuarios ]);
   }
 
   //funcion que trae la grafica con los cajones llenos

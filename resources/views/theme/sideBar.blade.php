@@ -1,9 +1,27 @@
-<div class="row" style="height: 500px;">
-  <nav class="navbar navbar-expand-lg" role="navigation" style="background-color: #e3f2fd; height: 500px;">
-    <ul class="nav" style="background-color: #5c636e; height: 500px;" >
-      <!--<li><a href="{{url('home')}}" style="Color:White; font-size: 16pt;">Principal <i class="fa fa-home"></i> </a></li>-->
-      <li><a href="{{url('estadisticas')}}" style="color:White; font-size: 16pt;">Estadisticas <i class="fa fa-signal"></i></a></li>
-      <li><a href="{{url('historial')}}" style="color:White; font-size: 16pt;">Historial <i class="fa fa-book"></i></a></li>
-    </ul>
-  </nav>
-</div>
+
+	<ul class="sidebar navbar-nav">
+	    <li class="nav-item">
+	        <a class="nav-link" href="#">
+	            <i class="fas fa-home"></i>
+	            <span>&nbsp;Home</span>
+	        </a>
+	    </li>
+	    <li class="nav-item">
+	        <a class="nav-link" href="{{url('estadisticas')}}">
+	            <i class="fas fa-signal"></i>
+	            <span>&nbsp;Stadistic</span>
+	        </a>
+	    </li>
+	    <li class="nav-item active">
+	        <a class="nav-link" href="#">
+	            <i class="fas fa-calendar-check"></i>
+	            <span>&nbsp;Resevation</span>
+	        </a>
+	    </li>
+	    <li class="nav-item">
+	        <a class="nav-link" href="{{url('historial')}}">
+	            <i class="fas fa-clock"></i>
+	            <span>&nbsp;History</span>
+	        </a>
+	    </li>
+	</ul>
