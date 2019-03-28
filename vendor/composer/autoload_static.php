@@ -300,7 +300,7 @@ class ComposerStaticInit6290d479cc366fc88f94e2d11f192064
         'App\\Cajon' => __DIR__ . '/../..' . '/app/Cajon.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\EstadisticaReservado' => __DIR__ . '/../..' . '/app/EstadisticaReservado.php',
-        'App\\EstadisticasCajones' => __DIR__ . '/../..' . '/app/estadisticasCajones.php',
+        'App\\EstadisticasCajones' => __DIR__ . '/../..' . '/app/EstadisticasCajones.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',

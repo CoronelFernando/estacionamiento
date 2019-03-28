@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\EstadisticasCajones;
 use DB;
+use app\EstadisticasCajones;
 use app\Cajon;
 use app\Seccion;
 use app\Status;
+
+//use Yajra\Datatables\facades\Datatables;
+//use Illuminate\Support\Facades\Validator;
+//use Illuminate\Support\Facades\Input;
 
 class HistorialController extends Controller
 {
@@ -83,7 +87,7 @@ class HistorialController extends Controller
 
   public function list(){
     $historialCajon = EstadisticasCajones::select('estCaj_id', 'estCaj_cajon_id', 'estCaj_fechaIni', 'estCaj_horaIni', 'estCaj_fechaFin', 'estCaj_horaFin', 'estCaj_disponible')
-      ->join('cajones', 'cajones.caj_id', '=', 'EstadisticasCajones.estCaj_cajon_id');
+      ->join('cajones', 'caj_id', '=', 'estCaj_cajon_id');
 
     return Datatables::of($historialCajon)->make(true);
   }

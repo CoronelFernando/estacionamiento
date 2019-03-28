@@ -18,7 +18,16 @@
             </div>
             <div class="card-body">
               <div id="contenedor" class="contenedor">
-                     <!--modal Reservacion-->
+                                    
+              </div>
+            </div>
+            <div class="card-footer small text-muted">Update yesterday at 11:59 PM</div>
+          </div>
+        </div>
+      </div>        
+    </div>
+  </form>
+  <!--modal Reservacion-->
   <div class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -29,22 +38,25 @@
         </button>
       </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+        <form>
+          <div class="form-group">
+            <label>Usuario:</label>
+            <input class="form-control">
+          </div>
+          <div class="form-group">
+            <label>No. Cajon:</label>
+            <input>
+          </div>
+          <div class="form-group">
+            <label>Tiempo:</label>
+            <input class="form-control">
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Aceptar</button>
       </div>
     </div>
   </div>
-</div>                
-              </div>
-            </div>
-            <div class="card-footer small text-muted">Update yesterday at 11:59 PM</div>
-          </div>
-        </div>
-      </div>        
-    </div>
-  </form>
- 
+</div>
 @endsection
