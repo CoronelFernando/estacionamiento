@@ -23,7 +23,6 @@
                                             <th>Disponibilidad</th>
                                             <th>Fecha</th>
                                             <th>Hora</th>
-                                            <th>Apartar</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -37,3 +36,6 @@
             </div>
         </form>
 @endsection
+
+<script type="text/javascript" src="{{url('/croquis/js/mapas.js')}}"></script>
+<script type="text/javascript" src="{{url('/croquis/js/herramientas.js')}}"></script>
