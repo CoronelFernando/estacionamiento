@@ -32,7 +32,7 @@ $(document).ready(function() {
       method: "GET",
       ajax: "historial/list",
       columns: [
-          {data: 'estCaj_cajon_id',},
+          {data: 'caj_descripcion',},
           {data: 'sec_descripcion'},
           {data: 'est_descripcion'},
           {data: 'estCaj_fechaFin'},
