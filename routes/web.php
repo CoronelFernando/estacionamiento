@@ -17,7 +17,7 @@
 
 //Pagina principal
 //Route::get('/', 'PrincipalController@index');
-Route::get('/', 'EstadisticasController@index');
+Route::get('/', 'PrincipalController@index');
 Route::get('home', 'PrincipalController@index');
 //Route::get('home', 'EstadisticasController@index');
 
