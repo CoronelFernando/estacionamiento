@@ -178,7 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         //Graficas
-        Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
+        //Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
 
         //fontawesomephp
         //Khill\Fontawesome\FontAwesomeServiceProvider::class,

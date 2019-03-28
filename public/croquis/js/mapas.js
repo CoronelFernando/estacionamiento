@@ -8,7 +8,7 @@ function estacionamiento1(){
     var lineaAmarilla = lineasAmarillas('0.5%', '100px', 'lineaAmarilla' + i);
     contenedor.appendChild(lineaAmarilla);
     
-    var cajon = cajones('7%','100px', ('cajon' + i), true, 'top');
+    var cajon = cajones('10%','100px', ('cajon' + i), true, 'top');
     contenedor.appendChild(cajon);
 
     if((nCajones - i) == 1){
@@ -19,16 +19,16 @@ function estacionamiento1(){
 
   var banqueta = banquetas('4%', '100px', 'banqueta1', 'top');
   contenedor.appendChild(banqueta);
-  var calle0 = calles('31.35%', '100px', 'calle0', 'top');
+  var calle0 = calles('32.5%', '100px', 'calle0', 'top');
   contenedor.appendChild(calle0);
-  var banqueta2 = banquetas('19.1%', '100px', 'banqueta2', 'top');
-  contenedor.appendChild(banqueta2);  
+  //var banqueta2 = banquetas('19.1%', '100px', 'banqueta2', 'top');
+  //contenedor.appendChild(banqueta2);  
 
  //calle central
-var calle1 = calles('80.84%', '80px', 'calle1', 'horizontal');
+var calle1 = calles('100%', '80px', 'calle1', 'horizontal');
 contenedor.appendChild(calle1);
-var banqueta3 = banquetas('19.1%', '80px', 'banqueta3', 'horizontal');
-contenedor.appendChild(banqueta3);
+//var banqueta3 = banquetas('19.1%', '80px', 'banqueta3', 'horizontal');
+//contenedor.appendChild(banqueta3);
 
 //segundo bloque de cajones
 var ncajones2 = 6;
@@ -36,22 +36,22 @@ for (var i = 0; i < ncajones2; i++) {
     var lineaAmarilla = lineasAmarillas('0.5%', '100px', 'lineaAmarilla' + i);
     contenedor.appendChild(lineaAmarilla);
 
-    var cajon = cajones('7%', '100px', ('cajon' + i), true, 'top');
+    var cajon = cajones('10%', '100px', ('cajon' + i), true, 'top');
     contenedor.appendChild(cajon);
 
     if((ncajones2 - i) == 1){
-      var lineaAmarilla = lineasAmarillas('0.5%', '150px', 'lineaAmarilla' + i);
+      var lineaAmarilla = lineasAmarillas('0.5%', '100px', 'lineaAmarilla' + i);
       contenedor.appendChild(lineaAmarilla);
     }
   }
 
-  var banqueta4 = banquetas('4%', '150px', 'banqueta4', 'top');
+  var banqueta4 = banquetas('4%', '100px', 'banqueta4', 'top');
   contenedor.appendChild(banqueta4);
-  var calle2 = calles('46%', '150px', 'calle', 'top');
+  var calle2 = calles('32.5%', '100px', 'calle', 'top');
   contenedor.appendChild(calle2);
-  var banquetax = banquetas('4.39%', '150px', 'baquetax', 'top');
-  contenedor.appendChild(banquetax);
-  var banqueta5 = banquetas('49.5%', '28px', 'banqueta5', 'top');
+  //var banquetax = banquetas('4.39%', '100px', 'baquetax', 'top');
+  //contenedor.appendChild(banquetax);
+  /*var banqueta5 = banquetas('49.5%', '28px', 'banqueta5', 'top');
   contenedor.appendChild(banqueta5);
   var calle4 = calles('46%', '28px', 'calle4', 'top');
   contenedor.appendChild(calle4);
@@ -61,14 +61,14 @@ for (var i = 0; i < ncajones2; i++) {
   //tercera oleada de cajones
   var ncajones2 = 6;
   for (var i = 0; i < ncajones2; i++) {
-    var lineaAmarilla = lineasAmarillas('0.5%', '150px', 'lineaAmarilla' + i);
+    var lineaAmarilla = lineasAmarillas('0.5%', '100px', 'lineaAmarilla' + i);
     contenedor.appendChild(lineaAmarilla);
 
-    var cajon = cajones('7%','150px', ('cajon' + i), true, 'bottom');
+    var cajon = cajones('7%','100px', ('cajon' + i), true, 'bottom');
     contenedor.appendChild(cajon);
 
     if((ncajones2 - i) == 1){
-      var lineaAmarilla = lineasAmarillas('0.5%', '150px', 'lineaAmarilla' + i);
+      var lineaAmarilla = lineasAmarillas('0.5%', '100px', 'lineaAmarilla' + i);
       contenedor.appendChild(lineaAmarilla);
     }
   }
