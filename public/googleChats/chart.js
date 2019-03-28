@@ -21,7 +21,7 @@ function drawChart() {
     var options = {
         'title':'Cantida de Cajones por Hora',
         'colors': ['#85E3FF', '#BFFCC6'],
-        'height': 500,
+        'height': 300,
         hAxis: {title: 'Horario', minValue: 0},
         vAxis: {title: 'Cajones Utilizados'}
         
