@@ -15,8 +15,6 @@
           @yield('content')
         </div>
       </div>
-
-      
       <footer class="sticky-footer">
           @include('theme.footer')
       </footer>
