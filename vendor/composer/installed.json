@@ -2804,8 +2804,13 @@
     },
     {
         "name": "symfony/css-selector",
+<<<<<<< HEAD
         "version": "v4.2.4",
         "version_normalized": "4.2.4.0",
+=======
+        "version": "v3.4.23",
+        "version_normalized": "3.4.23.0",
+>>>>>>> b3e4e67816c2df10f3bd127028834d185c48716f
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/css-selector.git",
@@ -2917,6 +2922,7 @@
     },
     {
         "name": "symfony/event-dispatcher",
+<<<<<<< HEAD
         "version": "v4.2.4",
         "version_normalized": "4.2.4.0",
         "source": {
@@ -2928,6 +2934,19 @@
             "type": "zip",
             "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/3354d2e6af986dd71f68b4e5cf4a933ab58697fb",
             "reference": "3354d2e6af986dd71f68b4e5cf4a933ab58697fb",
+=======
+        "version": "v3.4.23",
+        "version_normalized": "3.4.23.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/event-dispatcher.git",
+            "reference": "ec625e2fff7f584eeb91754821807317b2e79236"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/ec625e2fff7f584eeb91754821807317b2e79236",
+            "reference": "ec625e2fff7f584eeb91754821807317b2e79236",
+>>>>>>> b3e4e67816c2df10f3bd127028834d185c48716f
             "shasum": ""
         },
         "require": {
@@ -2948,7 +2967,11 @@
             "symfony/dependency-injection": "",
             "symfony/http-kernel": ""
         },
+<<<<<<< HEAD
         "time": "2019-02-23T15:17:42+00:00",
+=======
+        "time": "2019-02-23T15:06:07+00:00",
+>>>>>>> b3e4e67816c2df10f3bd127028834d185c48716f
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -3493,6 +3516,7 @@
     },
     {
         "name": "symfony/translation",
+<<<<<<< HEAD
         "version": "v4.2.4",
         "version_normalized": "4.2.4.0",
         "source": {
@@ -3504,6 +3528,19 @@
             "type": "zip",
             "url": "https://api.github.com/repos/symfony/translation/zipball/748464177a77011f8f4cdd076773862ce4915f8f",
             "reference": "748464177a77011f8f4cdd076773862ce4915f8f",
+=======
+        "version": "v3.4.23",
+        "version_normalized": "3.4.23.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/translation.git",
+            "reference": "3e2966209567ffed8825905b53fc8548446130aa"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/translation/zipball/3e2966209567ffed8825905b53fc8548446130aa",
+            "reference": "3e2966209567ffed8825905b53fc8548446130aa",
+>>>>>>> b3e4e67816c2df10f3bd127028834d185c48716f
             "shasum": ""
         },
         "require": {
@@ -3533,7 +3570,11 @@
             "symfony/config": "",
             "symfony/yaml": ""
         },
+<<<<<<< HEAD
         "time": "2019-02-27T03:31:50+00:00",
+=======
+        "time": "2019-02-23T15:06:07+00:00",
+>>>>>>> b3e4e67816c2df10f3bd127028834d185c48716f
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -3639,6 +3680,7 @@
     },
     {
         "name": "symfony/yaml",
+<<<<<<< HEAD
         "version": "v4.2.4",
         "version_normalized": "4.2.4.0",
         "source": {
@@ -3650,6 +3692,19 @@
             "type": "zip",
             "url": "https://api.github.com/repos/symfony/yaml/zipball/761fa560a937fd7686e5274ff89dcfa87a5047df",
             "reference": "761fa560a937fd7686e5274ff89dcfa87a5047df",
+=======
+        "version": "v3.4.23",
+        "version_normalized": "3.4.23.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/yaml.git",
+            "reference": "57f1ce82c997f5a8701b89ef970e36bb657fd09c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/yaml/zipball/57f1ce82c997f5a8701b89ef970e36bb657fd09c",
+            "reference": "57f1ce82c997f5a8701b89ef970e36bb657fd09c",
+>>>>>>> b3e4e67816c2df10f3bd127028834d185c48716f
             "shasum": ""
         },
         "require": {
@@ -3665,7 +3720,11 @@
         "suggest": {
             "symfony/console": "For validating YAML files using the lint command"
         },
+<<<<<<< HEAD
         "time": "2019-02-23T15:17:42+00:00",
+=======
+        "time": "2019-02-23T15:06:07+00:00",
+>>>>>>> b3e4e67816c2df10f3bd127028834d185c48716f
         "type": "library",
         "extra": {
             "branch-alias": {

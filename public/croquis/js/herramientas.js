@@ -46,13 +46,13 @@ function cajones(width, height, id, estado, orientacion){
 //NOS RETORNA UN DIV
 function logoCajon(estado, id, orientacion){
   var divLogoCajon = document.createElement('div');
-  if(orientacion == 'top') divLogoCajon.style.marginTop = '-110px';
+  if(orientacion == 'top') divLogoCajon.style.marginTop = '-70px';
   if(orientacion == 'bottom') divLogoCajon.style.marginTop = '-90px';
   divLogoCajon.style.marginLeft = '17px';
   divLogoCajon.id = id;
   var image = document.createElement('img');
-  image.style.width = '60px';
-  image.style.height = '50px';
+  image.style.width = '30px';
+  image.style.height = '25px';
   if(estado) image.src = 'croquis/image/vacio.png';
   else image.src = 'croquis/image/opcupado.png';
   divLogoCajon.appendChild(image);

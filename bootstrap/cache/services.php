@@ -28,7 +28,6 @@
     24 => 'App\\Providers\\AuthServiceProvider',
     25 => 'App\\Providers\\EventServiceProvider',
     26 => 'App\\Providers\\RouteServiceProvider',
-    27 => 'Khill\\Lavacharts\\Laravel\\LavachartsServiceProvider',
   ),
   'eager' => 
   array (
@@ -139,7 +138,6 @@
     'validator' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
-    'lavacharts' => 'Khill\\Lavacharts\\Laravel\\LavachartsServiceProvider',
   ),
   'when' => 
   array (
@@ -180,9 +178,6 @@
     array (
     ),
     'Laravel\\Tinker\\TinkerServiceProvider' => 
-    array (
-    ),
-    'Khill\\Lavacharts\\Laravel\\LavachartsServiceProvider' => 
     array (
     ),
   ),
