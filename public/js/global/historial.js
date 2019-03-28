@@ -34,10 +34,9 @@ $(document).ready(function() {
       columns: [
           {data: 'estCaj_cajon_id',},
           {data: 'sec_descripcion'},
-          {data: 'estCaj_disponible'},
+          {data: 'est_descripcion'},
           {data: 'estCaj_fechaFin'},
           {data: 'estCaj_horaFin'},
-          {data: 'estCaj_disponible'}
       ]
   });
 });

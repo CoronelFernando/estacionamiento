@@ -89,7 +89,7 @@ class HistorialController extends Controller
     $historialCajon = DB::table('estadisticascajones')
     ->join('cajones', 'caj_id', '=', 'estCaj_cajon_id')
     ->join('secciones', 'sec_id', '=', 'caj_seccion_id')
-    //->join('estatus', 'est_id', '=', 'estCaj_disponible')
+    ->join('estatus', 'est_id', '=', 'estCaj_disponible')
     //->where('estCaj_cajon_id', $request['cajon'])
     //->orwhere('sec_id', $request['seccion'])
     //->orwhere('est_id', $request['status'])

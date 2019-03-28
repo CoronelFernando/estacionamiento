@@ -23,7 +23,6 @@
                                             <th>Disponibilidad</th>
                                             <th>Fecha</th>
                                             <th>Hora</th>
-                                            <th>Apartar</th>
                                         </tr>
                                     </thead>
                                     <tbody>
