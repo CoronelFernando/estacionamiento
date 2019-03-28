@@ -17,3 +17,4 @@
 <link rel="stylesheet" href="{{url('css/sb-admin.css')}}">
 <link rel="stylesheet" href="{{url('googleChats/chart.css')}}">
 <link rel="stylesheet" href="{{url('croquis/css/herramientas.css')}}">
+<link rel="stylesheet" href="{{url('css/dataTable.bootstrap4.css')}}">
