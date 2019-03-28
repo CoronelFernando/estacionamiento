@@ -9,7 +9,7 @@ use app\Cajon;
 use app\Seccion;
 use app\Status;
 
-//use Yajra\Datatables\facades\Datatables;
+use Yajra\Datatables\facades\Datatables;
 //use Illuminate\Support\Facades\Validator;
 //use Illuminate\Support\Facades\Input;
 
@@ -86,8 +86,14 @@ class HistorialController extends Controller
   }
 
   public function list(){
-    $historialCajon = EstadisticasCajones::select('estCaj_id', 'estCaj_cajon_id', 'estCaj_fechaIni', 'estCaj_horaIni', 'estCaj_fechaFin', 'estCaj_horaFin', 'estCaj_disponible')
-      ->join('cajones', 'caj_id', '=', 'estCaj_cajon_id');
+    $historialCajon = DB::table('estadisticascajones')
+    ->join('cajones', 'caj_id', '=', 'estCaj_cajon_id')
+    ->join('secciones', 'sec_id', '=', 'caj_seccion_id')
+    //->join('estatus', 'est_id', '=', 'estCaj_disponible')
+    //->where('estCaj_cajon_id', $request['cajon'])
+    //->orwhere('sec_id', $request['seccion'])
+    //->orwhere('est_id', $request['status'])
+    ->orderby('estCaj_horaFin', 'DESC');
 
     return Datatables::of($historialCajon)->make(true);
   }

@@ -112,11 +112,7 @@ class WrappedListener
 
         $e = $this->stopwatch->start($this->name, 'event_listener');
 
-<<<<<<< HEAD
-        ($this->listener)($event, $eventName, $dispatcher);
-=======
         \call_user_func($this->listener, $event, $eventName, $dispatcher);
->>>>>>> b3e4e67816c2df10f3bd127028834d185c48716f
 
         if ($e->isStarted()) {
             $e->stop();

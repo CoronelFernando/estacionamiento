@@ -23,6 +23,7 @@ function loadDocument(){
     //window.setInterval("desplegarNumeroOcupados()", 1000);
 }
 
+
 function desplegarCajones(select){
   var formData = new FormData();
   if(select != undefined) formData.append('seccion', select.value);

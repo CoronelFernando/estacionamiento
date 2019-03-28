@@ -183,6 +183,9 @@ return [
         //fontawesomephp
         //Khill\Fontawesome\FontAwesomeServiceProvider::class,
 
+        //datatable
+        Yajra\Datatables\DatatablesServiceProvider::class,
+
     ],
 
     /*

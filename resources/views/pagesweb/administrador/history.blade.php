@@ -37,3 +37,6 @@
             </div>
         </form>
 @endsection
+
+<script type="text/javascript" src="{{url('/croquis/js/mapas.js')}}"></script>
+<script type="text/javascript" src="{{url('/croquis/js/herramientas.js')}}"></script>
