@@ -80,4 +80,12 @@ class HistorialController extends Controller
 
     return $historial;
   }
+
+  public function list(){
+    $historialCajon = EstadisticasCajones::select('estCaj_id', 'estCaj_cajon_id', 'estCaj_fechaIni', 'estCaj_horaIni', 'estCaj_fechaFin', 'estCaj_horaFin', 'estCaj_disponible')
+      ->join('cajones', 'cajones.caj_id', '=', 'EstadisticasCajones.estCaj_cajon_id');
+
+    return Datatables::of($historialCajon)->make(true);
+  }
+
 }

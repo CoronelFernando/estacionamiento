@@ -82,4 +82,5 @@ class EstadisticasController extends Controller
     //dd($ocupadosHora);
     return $ocupadosHora;
   }
+
 }

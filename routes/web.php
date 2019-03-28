@@ -18,8 +18,8 @@
 //Pagina principal
 //Route::get('/', 'PrincipalController@index');
 Route::get('/', 'EstadisticasController@index');
-//Route::get('home', 'PrincipalController@index');
-Route::get('home', 'EstadisticasController@index');
+Route::get('home', 'PrincipalController@index');
+//Route::get('home', 'EstadisticasController@index');
 
 //Pagina de estadisticas
 Route::get('estadisticas', 'EstadisticasController@index');
@@ -33,3 +33,4 @@ Route::get('estadisticas/areaChart', 'EstadisticasController@areaChart');
 
 Route::get('historial', 'HistorialController@index');
 Route::post('historial/allHistorial', 'HistorialController@showHistorial');
+Route::get('historial/list', 'HistorialController@list');

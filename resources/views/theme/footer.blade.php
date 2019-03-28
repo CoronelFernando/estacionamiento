@@ -22,3 +22,6 @@
 <script src="{{url('js/datatables-demo.js')}}"></script>
 <script type="text/javascript" src="{{url('https://www.gstatic.com/charts/loader.js')}}"></script>
 <script type="text/javascript" src="{{url('/googleChats/chart.js')}}"></script>
+<script type="text/javascript" src="{{url('/js/global/historial.js')}}"></script>
+<script type="text/javascript" src="{{url('/croquis/js/herramientas.js')}}"></script>
+<script type="text/javascript" src="{{url('/croquis/js/mapas.js')}}"></script>

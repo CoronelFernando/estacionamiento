@@ -1,10 +1,28 @@
 //TABLA
-var tHead = document.getElementById('dtHistorial').children[0]; var tBody = document.getElementById('dtHistorial').children[1];
+//var tHead = document.getElementById('dtHistorial').children[0]; var tBody = document.getElementById('dtHistorial').children[1];
 //SELECTS
 var selSearchSeccion = document.getElementById('selSearchSeccion'); var selSearchCajon = document.getElementById('selSearchCajon');
 var selSearchStatus = document.getElementById('selSearchStatus');
 
-desplegarHistorial(1);
+$(document).ready(function() {
+    dtHisAnt = $('#dtHistorialCajon').DataTable({
+      processing: true,
+      serverSide: true,
+      ajax: "{{ url('antivirus-historial/list') }}",
+      columns: [
+          {data: 'estCaj_cajon_id'},
+          {data: 'estCaj_cajon_id'},
+          {data: 'antivirus_paquete'},
+          {data: 'antivirus_serial'},
+          {data: 'antivirus_fecini'},
+          {data: 'antivirus_fecfin'},
+          {data: 'antivirus_dias_restantes'},
+          {data: 'cliente_descripcion'}
+      ]
+  });
+});
+
+//desplegarHistorial(1);
 
 function desplegarHistorial(page){
   var formData = new FormData();

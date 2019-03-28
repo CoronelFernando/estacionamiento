@@ -1,7 +1,7 @@
 
 	<ul class="sidebar navbar-nav">
 	    <li class="nav-item">
-	        <a class="nav-link" href="#">
+	        <a class="nav-link" href="{{url('home')}}">
 	            <i class="fas fa-home"></i>
 	            <span>&nbsp;Home</span>
 	        </a>
@@ -12,7 +12,7 @@
 	            <span>&nbsp;Stadistic</span>
 	        </a>
 	    </li>
-	    <li class="nav-item active">
+	    <li class="nav-item">
 	        <a class="nav-link" href="#">
 	            <i class="fas fa-calendar-check"></i>
 	            <span>&nbsp;Resevation</span>
