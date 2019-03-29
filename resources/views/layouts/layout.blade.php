@@ -4,24 +4,21 @@
     @include('theme.head')
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
   </head>
-  <body>
-    <header>
+  <body id="page-top">
       @include('theme.header')
       <div id="alerta"></div>
-    </header>
-
-      <div style="float: left;">
-        @include('theme.sidebar')
+        <div class="wrapper">
+          <div style="float: left">
+          @include('theme.sidebar')
+          </div>
+          <div class="content-wrapper">
+          <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
+            @section('content')
+            @yield('content')
+          <footer class="sticky-footer">
+            @include('theme.footer')
+          </footer>
+        </div>
       </div>
-
-      <div>
-        <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
-          @section('content')
-          @yield('content')
-      </div>
-      <footer>
-          @include('theme.footer')
-      </footer>
-
   </body>
 </html>

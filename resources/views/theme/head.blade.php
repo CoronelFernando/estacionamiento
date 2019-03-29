@@ -1,5 +1,8 @@
-<meta charset="utf-8" content="IE=edge" http-equiv="X-UA-Compatible">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 
 <title>Estacionamiento intelingente</title>
 
@@ -14,3 +17,4 @@
 <link rel="stylesheet" href="{{url('css/sb-admin.css')}}">
 <link rel="stylesheet" href="{{url('googleChats/chart.css')}}">
 <link rel="stylesheet" href="{{url('croquis/css/herramientas.css')}}">
+<link rel="stylesheet" href="{{url('css/dataTable.bootstrap4.css')}}">

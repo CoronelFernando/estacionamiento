@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+<footer class="sticky-footer">
+            <div class="container my-auto">
+              <div class="copyright text-center my-auto">
+                <!--<a href="#">Nosotros</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">Soporte</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">contactanos</a>-->
+              </div><br>
+              <div class="copyright text-center my-auto">
+                <span>Copyright © Smart Parking 2019 All rights reserved</span>
+              </div>
+            </div>
+          </footer>
+=======
 
 <div class="container my-auto">
   <div class="copyright text-center my-auto">
@@ -10,6 +24,7 @@
   </div>
 </div>
           
+>>>>>>> b181291273ffcc2c779bc8ead43e14cd787fce77
 
 <!--script-->
 <script src="{{url('js/app.js')}}"></script>
