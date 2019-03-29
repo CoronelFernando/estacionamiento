@@ -7,17 +7,18 @@
   <body id="page-top">
       @include('theme.header')
       <div id="alerta"></div>
-      <div style="wrapper">
-        @include('theme.sidebar')
-        <div>
-        <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
-          @section('content')
-          @yield('content')
+        <div class="wrapper">
+          <div style="float: left">
+          @include('theme.sidebar')
+          </div>
+          <div class="content-wrapper">
+          <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
+            @section('content')
+            @yield('content')
+          <footer class="sticky-footer">
+            @include('theme.footer')
+          </footer>
         </div>
       </div>
-      <footer class="sticky-footer">
-          @include('theme.footer')
-      </footer>
-
   </body>
 </html>
