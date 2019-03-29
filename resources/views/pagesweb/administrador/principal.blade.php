@@ -42,20 +42,27 @@
           <form>
           	<div class="form-group">
             	<label>Usuario:</label>
-            	<input class="form-control">                
+            	<input class="form-control" id="txtUsuario" name="txtUsuario" readonly>                
           	</div>
             <div class="form-group">
               <label>No. Cajon:</label>
-              <input class="form-control">
+              <input class="form-control" id="txtCajon" name="txtCajon" readonly>
            </div>
             <div class="form-group">
               <label>Tiempo:</label>
-              <input class="form-control">                
+              <!--<input class="form-control" id="txtTiempo" name="txtTiempo">-->
+                  <select id="txtTiempo" class="form-control" name="txtTiempo">
+                    <!--<option selected="true" disabled="disabled">Seleccione Tiempo</option>
+                    <option value="1">1 hora</option>
+                    <option value="2">3 horas</option>
+                    <option value="3">5 horas</option>-->
+                  </select>
             </div>
           </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal" id="btnConfirmar">Confirmar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnCerrar" onclick="LimpiarModal()">Cerrar</button>
       </div>
     </div>
   </div>

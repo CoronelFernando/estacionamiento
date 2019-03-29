@@ -25,7 +25,7 @@ var refreshId =  setInterval( function(){
   }, 36000);
 }*/
 
-$(document).ready(function() {
+$(document).ready(function(){
     dtHisAnt = $('#dtHistorialCajon').DataTable({
       processing: true,
       serverSide: true,

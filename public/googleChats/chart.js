@@ -9,21 +9,16 @@ function drawChart() {
         ['3 - 4',  1,      2],
         ['4 - 5',  0,      2],
         ['5 - 6',  2,      0],
-        ['6 - 7',  3,      4],
-        ['7 - 8',  1,      6],
-        ['8 - 9',  0,      2],
-        ['9 - 10',  2,      0],
-        ['10 - 11',  3,      4],
-        ['11 - 12',  1,      0],
-        ['12 - 13',  0,      2]
+        ['7 - 8',  1,      4]
       ]);
 
     var options = {
         'title':'Cantida de Cajones por Hora',
         'colors': ['#85E3FF', '#BFFCC6'],
-        'height': 300,
-        hAxis: {title: 'Horario', minValue: 0},
-        vAxis: {title: 'Cajones Utilizados'}
+        'height': 200,
+        hAxis: {title: 'Horario', minValue: 0, maxValue: 4},
+        vAxis: {title: 'Cajones Utilizados',  minValue: 0,
+            ticks: [0, 2, 4]}
         
     };
 

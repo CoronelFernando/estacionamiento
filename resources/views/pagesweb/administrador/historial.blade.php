@@ -66,6 +66,4 @@
 </div>
 <script type="text/javascript" src="js/global.js"></script>
 <script src="js/global/historial.js" charset="utf-8"></script>
-
-
 @endsection

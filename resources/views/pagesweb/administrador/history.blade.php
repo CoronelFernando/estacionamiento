@@ -36,5 +36,3 @@
             </div>
         </form>
 @endsection
-
-<script type="text/javascript" src="{{url('/js/global/historial.js')}}"></script>
