@@ -6,7 +6,7 @@
             <li class="breadcrumb-item">
                 <a href="#">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">Stadistics</li>
+            <li class="breadcrumb-item active">History</li>
         </ol>
         <div class="card mb-3">
             <div class="card-header">
