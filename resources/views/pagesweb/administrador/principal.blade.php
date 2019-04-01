@@ -18,7 +18,7 @@
             </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-9">
+                <div class="col-8">
                   <div class="card">
                     <div class="card-header">
                       Parking Space
@@ -29,7 +29,7 @@
                   </div>
                 </div>
                
-                <div class=" col-sm-3">
+                <div class=" col-sm-4">
                   <div class="card mb-3">
                     <div class="card-header">
                       Recent Activities
