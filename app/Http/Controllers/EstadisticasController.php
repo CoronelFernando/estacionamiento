@@ -8,6 +8,7 @@ use Lava;
 use app\Seccion;
 use app\EstadisticasCajones;
 use Khill\Lavacharts\Lavacharts;
+use Yajra\Datatables\facades\Datatables;
 
 class EstadisticasController extends Controller
 {
@@ -80,6 +81,33 @@ class EstadisticasController extends Controller
     ->groupBy('estCaj_cajon_id', 'estCaj_hora')
     ->take(1)->get()->toJson();
     //dd($ocupadosHora);
+    return $ocupadosHora;
+  }
+
+  public function estadisticasParaGrafica(){
+    /*$ocupadosHora = DB::select('SELECT 
+    (SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 1) AS disponibles, 
+    (SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 2) AS ocupados,
+    estCaj_fechaFin AS fecha, estCaj_horaFin AS hora',
+    'FROM estadisticascajones ORDER BY estCaj_fechaFin DESC, estCaj_horaFin DESC')->get()->toJson();*/
+    /*$fechaYHora = DB::table('estadisticascajones')->select('estCaj_fechaFin AS fecha', 'estCaj_horaFin AS hora')->get()->toJson();
+    $ocupados = DB::table('cajones')->select('caj_id')
+     ->count()
+     ->union($fechaYHora)->get()->toJson();*/
+     $ocupadosHora = DB::table('estadisticascajones')->select(
+      DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 1) AS disponibles'),
+      DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 2) AS ocupados'),
+      //DB::raw('CONCAT(estCaj_fechaFin, " ", estCaj_horaFin) AS hora'))
+      DB::raw('CONCAT(estCaj_horaFin) AS hora'))
+     ->limit(10)
+     ->orderby('estCaj_fechaFin', 'DESC')
+     ->orderby('estCaj_horaFin', 'DESC')
+     ->get()->toJson();
+
+
+
+
+     //return Datatables::of($ocupadosHora)->make(true);
     return $ocupadosHora;
   }
 

@@ -10,7 +10,7 @@ var inputSearch = document.getElementById('txtsearchCajon'); var lblOcupadosNume
 var lblOcupadosHora = document.getElementById('lblOcupadosHora');
 
 function loadDocument(){
-  desplegarCajones();
+  //desplegarCajones();
   /*var refreshId =  setInterval( function(){
     //if(selectGrafica.value == 2)
     $('#barraLlena').load('estadisticas/autosPorHora');//actualizas el div

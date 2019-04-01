@@ -1,10 +1,10 @@
 
 <div class="container my-auto">
-  <div class="copyright text-center my-auto">
+  <!--<div class="copyright text-center my-auto">
     <a href="#">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="#">Support</a>&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="#">Contact</a>
-  </div><br>
+  </div><br>-->
   <div class="copyright text-center my-auto">
     <span>Copyright © Smart Parking 2019 All rights reserved</span>
   </div>

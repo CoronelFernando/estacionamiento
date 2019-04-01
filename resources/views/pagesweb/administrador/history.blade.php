@@ -10,7 +10,7 @@
         </ol>
         <div class="card mb-3">
             <div class="card-header">
-                Stadistics
+                Statistics
             </div>
             <div class="card-body">
                 <table class="table table-bordered" id="dtHistorialCajon" width="100%" cellspacing="0">

@@ -3,27 +3,13 @@
 //SELECTS
 var selSearchSeccion = document.getElementById('selSearchSeccion'); var selSearchCajon = document.getElementById('selSearchCajon');
 var selSearchStatus = document.getElementById('selSearchStatus');
-/*loadDocument();
+//loadDocument();
 
 function loadDocument(){
-var refreshId =  setInterval( function(){
-     dtHisAnt = $('#dtHistorialCajon').DataTable({
-      processing: true,
-      serverSide: true,
-      ajax: "{{ url('antivirus-historial/list') }}",
-      columns: [
-          {data: 'estCaj_cajon_id'},
-          {data: 'estCaj_cajon_id'},
-          {data: 'antivirus_paquete'},
-          {data: 'antivirus_serial'},
-          {data: 'antivirus_fecini'},
-          {data: 'antivirus_fecfin'},
-          {data: 'antivirus_dias_restantes'},
-          {data: 'cliente_descripcion'}
-      ]
-  });
-  }, 36000);
-}*/
+ setInterval( function(){
+    dtHisAnt = $('#dtHistorialCajon').DataTable().draw();
+  }, 5000);
+}
 
 $(document).ready(function(){
     dtHisAnt = $('#dtHistorialCajon').DataTable({
@@ -32,7 +18,7 @@ $(document).ready(function(){
       method: "GET",
       ajax: "historial/list",
       columns: [
-          {data: 'caj_descripcion',},
+          {data: 'caj_descripcion'},
           {data: 'sec_descripcion'},
           {data: 'est_descripcion'},
           {data: 'estCaj_fechaFin'},

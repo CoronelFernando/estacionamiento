@@ -25,6 +25,7 @@ Route::get('home', 'PrincipalController@index');
 Route::get('estadisticas', 'EstadisticasController@index');
 Route::post('estadisticas/DesplegarCajones', 'CajonControlller@allCajones');
 Route::post('estadisticas/numeroOcupados', 'EstadisticasController@desplegarNumeroOcupados');
+Route::get('estadisticas/estadisticasGrafica', 'EstadisticasController@estadisticasParaGrafica');
 
 //Graficas
 Route::get('estadisticas/autosPorHora', 'EstadisticasController@autosPorHora');
