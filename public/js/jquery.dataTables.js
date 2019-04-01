@@ -4978,7 +4978,7 @@
 		}
 		else
 		{
-			_fnLog( settings, 0, "Unknown paging action: "+action, 5 );
+			_fnLog( settings, 0, "Unknown paging action: "+action, 10 );
 		}
 	
 		var changed = settings._iDisplayStart !== start;
@@ -10186,11 +10186,11 @@
 		 *  @example
 		 *    $(document).ready( function() {
 		 *      $('#example').dataTable( {
-		 *        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+		 *        "lengthMenu": [[5, 7], [5, 7]]
 		 *      } );
 		 *    } );
 		 */
-		"aLengthMenu": [ 10, 25, 50, 100 ],
+		"aLengthMenu": [5, 7],
 	
 	
 		/**
@@ -11194,7 +11194,7 @@
 		 *      } );
 		 *    } )
 		 */
-		"iDisplayLength": 10,
+		"iDisplayLength": 5,
 	
 	
 		/**

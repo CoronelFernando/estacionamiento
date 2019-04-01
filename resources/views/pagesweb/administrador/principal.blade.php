@@ -10,15 +10,33 @@
               <li class="breadcrumb-item">
                 <a href="#">Dashboard</a>
               </li>
-              <li class="breadcrumb-item active">Stadistics</li>
+              <li class="breadcrumb-item active">Map</li>
             </ol>
           <div class="card mb-3">
             <div class="card-header">
-              Stadistics
+              Map
             </div>
             <div class="card-body">
-              <div id="contenedor" class="contenedor">
-                                                   
+              <div class="row">
+                <div class="col-9">
+                  <div class="card">
+                    <div class="card-header">
+                      Parking Space
+                    </div>
+                    <div class="card-body">
+                      <div id="contenedor" class="contenedor"></div>
+                    </div>
+                  </div>
+                </div>
+               
+                <div class=" col-sm-3">
+                  <div class="card mb-3">
+                    <div class="card-header">
+                      Recent Activities
+                    </div>
+                    <div id="donutchart"></div>
+                  </div>                                
+                </div>
               </div>
             </div>
             <div class="card-footer small text-muted">Update yesterday at 11:59 PM</div>
@@ -35,7 +53,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title">Reservacion</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>          
         </div>
         <div class="modal-body">

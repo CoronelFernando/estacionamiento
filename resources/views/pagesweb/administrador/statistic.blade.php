@@ -1,34 +1,34 @@
 @extends('layouts.layout')
 @section('content')
-        <form>
-            <div id="wrapper">
-				<div id="content-wrapper">
-                    <div class="container-fluid">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="#">Dashboard</a>
-                            </li>
-                            <li class="breadcrumb-item active">Statistics</li>
-                        </ol>
-                        <div class="card mb-3">
-                            <div class="card-header">
-                                Stadistics
-                            </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="clearfix"></div>
-                                        <div class="col-md-12">
-                                        <div id="chart_div" class="chart">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div class="card-footer small text-muted">Update yesterday at 11:59 PM</div>
-                        </div>
-                    </div>
-				</div>				
+<form>
+  <div id="wrapper">
+    <div id="content-wrapper">
+      <div class="container-fluid">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">Statistics</li>
+        </ol>
+        <div class="card mb-3">
+          <div class="card-header">
+            Stadistics
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="clearfix"></div>
+              <div class="col-md-12">
+                <div id="chart_div" class="chart">
+              </div>
             </div>
-        </form>
+          </div>
+        </div> 
+        <div class="card-footer small text-muted">Update yesterday at 11:59 PM</div>
+      </div>
+    </div>
+  </div>				
+  </div>
+</form>
         <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
