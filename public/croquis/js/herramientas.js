@@ -52,10 +52,10 @@ function logoCajon(estado, id, orientacion){
   divLogoCajon.style.marginLeft = '17px';
   divLogoCajon.id = id;
   var image = document.createElement('img');
-  image.style.width = '30px';
-  image.style.height = '25px';
-  if(estado) image.src = 'croquis/image/vacio.png';
-  else image.src = 'croquis/image/opcupado.png';
+  image.style.width = '45px';
+  image.style.height = '45px';
+  if(estado) image.src = 'croquis/image/vacio3.png';
+  else image.src = 'croquis/image/opcupado2.png';
   divLogoCajon.appendChild(image);
 
   return divLogoCajon;
