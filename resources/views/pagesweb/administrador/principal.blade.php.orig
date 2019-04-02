@@ -10,11 +10,19 @@
               <li class="breadcrumb-item">
                 <a href="#">Dashboard</a>
               </li>
+<<<<<<< HEAD
+              <li class="breadcrumb-item active">Home</li>
+            </ol>
+          <div class="card mb-3">
+            <div class="card-header">
+              Home
+=======
               <li class="breadcrumb-item active">Map</li>
             </ol>
           <div class="card mb-3">
             <div class="card-header">
               Map
+>>>>>>> 8cefb40b4a29be2bef5703ca826cfe0dd1ac8c6e
             </div>
             <div class="card-body">
               <div class="row">
@@ -53,7 +61,11 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
+<<<<<<< HEAD
           <h4 class="modal-title">Apartado</h4>
+=======
+          <h4 class="modal-title">Reservacion</h4>
+>>>>>>> 8cefb40b4a29be2bef5703ca826cfe0dd1ac8c6e
           <button type="button" class="close" data-dismiss="modal">&times;</button>          
         </div>
         <div class="modal-body">
