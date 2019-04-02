@@ -10,11 +10,11 @@
               <li class="breadcrumb-item">
                 <a href="#">Dashboard</a>
               </li>
-              <li class="breadcrumb-item active">Stadistics</li>
+              <li class="breadcrumb-item active">Home</li>
             </ol>
           <div class="card mb-3">
             <div class="card-header">
-              Stadistics
+              Home
             </div>
             <div class="card-body">
               <div id="contenedor" class="contenedor">
@@ -35,7 +35,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title">Apartado</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>          
         </div>
         <div class="modal-body">
@@ -68,4 +68,3 @@
   </div>
 </div>
 @endsection
-

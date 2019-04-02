@@ -19,6 +19,7 @@
 //Route::get('/', 'PrincipalController@index');
 Route::get('/', 'PrincipalController@index');
 Route::get('home', 'PrincipalController@index');
+Route::get('home/cajones', 'PrincipalController@cajones');
 //Route::get('home', 'EstadisticasController@index');
 
 //Pagina de estadisticas

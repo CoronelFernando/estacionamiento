@@ -32,7 +32,7 @@ function cajones(width, height, id, estado, orientacion){
   var cajon = document.createElementNS(ns, 'rect');
   cajon.setAttributeNS(null, 'width', '100%');
   cajon.setAttributeNS(null, 'height', '100%');
-  if(estado) cajon.setAttributeNS(null, 'fill', '#10ac84'); //verde/disponible
+  if(estado == 1) cajon.setAttributeNS(null, 'fill', '#10ac84'); //verde/disponible
   else cajon.setAttributeNS(null, 'fill', '#ff6b6b'); //rojo/no disponible
   cajon.setAttributeNS(null, 'rx', '0');
   cajon.setAttributeNS(null, 'ry', '0');
@@ -54,8 +54,8 @@ function logoCajon(estado, id, orientacion){
   var image = document.createElement('img');
   image.style.width = '30px';
   image.style.height = '25px';
-  if(estado) image.src = 'croquis/image/vacio.png';
-  else image.src = 'croquis/image/opcupado.png';
+  if(estado == 1) image.src = 'croquis/image/vacio.png';
+  else image.src = 'croquis/image/ocupado.png';
   divLogoCajon.appendChild(image);
 
   return divLogoCajon;

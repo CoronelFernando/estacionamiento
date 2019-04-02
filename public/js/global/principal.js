@@ -1,13 +1,16 @@
 
 
+function obtenerReservados(){
+var xml = 
 
+}
 
 
 function show(cajonid){
 	$("#myModal").modal();
 	 $('#txtTiempo').empty();
 	$('#myModal [name="txtUsuario"]').val("Administrador");
-	$('#myModal [name="txtCajon"]').val(cajonid);
+	$('#myModal [name="txtCajon"]').val( 'cajon ' + cajonid);
 	$("#txtTiempo").append("<option selected disabled>Seleccione Tiempo</option>");
       for (var i = 0; i < 3; i++) {
       	if(i==0){

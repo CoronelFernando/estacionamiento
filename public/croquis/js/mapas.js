@@ -1,14 +1,29 @@
-estacionamiento1();
+obtenerCajones();
+window.setInterval("obtenerCajones()", 10000);
 
-function estacionamiento1(){
 
+function obtenerCajones(){
+  var xml = new XMLHttpRequest();
+  xml.open('GET', 'home/cajones', true);
+  xml.addEventListener('load', function(){
+    var jsonData = JSON.parse(xml.responseText);
+    estacionamiento1(jsonData);
+    //console.log(jsonData);
+  });
+  xml.send();
+}
+
+//estacionamiento1();
+
+function estacionamiento1(jsonData){
+  document.getElementById('contenedor').innerHTML = '';
   //Primera oleada de cajones
   var nCajones = 6;
   for (var i = 0; i < nCajones; i++) {
     var lineaAmarilla = lineasAmarillas('0.5%', '100px', 'lineaAmarilla' + i);
     contenedor.appendChild(lineaAmarilla);
-    
-    var cajon = cajones('10%','100px', ('cajon' + i), true, 'top');
+    //console.log(jsonData[i]);
+    var cajon = cajones('10%','100px', jsonData[i].caj_id, jsonData[i].caj_status_id, 'top');
     contenedor.appendChild(cajon);
 
     if((nCajones - i) == 1){
@@ -31,12 +46,12 @@ contenedor.appendChild(calle1);
 //contenedor.appendChild(banqueta3);
 
 //segundo bloque de cajones
-var ncajones2 = 6;
-for (var i = 0; i < ncajones2; i++) {
+var ncajones2 = 12;
+for (var i = 6; i < ncajones2; i++) {
     var lineaAmarilla = lineasAmarillas('0.5%', '100px', 'lineaAmarilla' + i);
     contenedor.appendChild(lineaAmarilla);
 
-    var cajon = cajones('10%', '100px', ('cajon' + i), true, 'top');
+    var cajon = cajones('10%', '100px',jsonData[i].caj_id, jsonData[i].caj_status_id, 'top');
     contenedor.appendChild(cajon);
 
     if((ncajones2 - i) == 1){
