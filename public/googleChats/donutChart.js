@@ -13,7 +13,7 @@ google.charts.load("current", {packages:["corechart"]});
           title: 'Smart Parking',
           colors: ['#10ac84', "#ff6b6b", "#2e86de"],
           height: 320,
-          width: 400,
+          width: 350,
           pieHole: 0.4,
         };
 

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c
+class ComposerStaticInitc6e58e693c639abb7ca75b51f2442c4e
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -400,6 +400,7 @@ class ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c
         'Dotenv\\Exception\\InvalidPathException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/InvalidPathException.php',
         'Dotenv\\Exception\\ValidationException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/ValidationException.php',
         'Dotenv\\Loader' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Loader.php',
+        'Dotenv\\Parser' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Parser.php',
         'Dotenv\\Validator' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Validator.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
         'Faker\\Calculator\\Iban' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Iban.php',
@@ -2389,6 +2390,7 @@ class ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c
         'Parsedown' => __DIR__ . '/..' . '/erusev/parsedown/Parsedown.php',
         'PhpParser\\Builder' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder.php',
         'PhpParser\\BuilderFactory' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/BuilderFactory.php',
+        'PhpParser\\BuilderHelpers' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/BuilderHelpers.php',
         'PhpParser\\Builder\\Class_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder/Class_.php',
         'PhpParser\\Builder\\Declaration' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder/Declaration.php',
         'PhpParser\\Builder\\FunctionLike' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder/FunctionLike.php',
@@ -2398,23 +2400,37 @@ class ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c
         'PhpParser\\Builder\\Namespace_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder/Namespace_.php',
         'PhpParser\\Builder\\Param' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder/Param.php',
         'PhpParser\\Builder\\Property' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder/Property.php',
+        'PhpParser\\Builder\\TraitUse' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder/TraitUse.php',
+        'PhpParser\\Builder\\TraitUseAdaptation' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder/TraitUseAdaptation.php',
         'PhpParser\\Builder\\Trait_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder/Trait_.php',
         'PhpParser\\Builder\\Use_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder/Use_.php',
         'PhpParser\\Comment' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Comment.php',
         'PhpParser\\Comment\\Doc' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Comment/Doc.php',
+        'PhpParser\\ConstExprEvaluationException' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/ConstExprEvaluationException.php',
+        'PhpParser\\ConstExprEvaluator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/ConstExprEvaluator.php',
         'PhpParser\\Error' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Error.php',
         'PhpParser\\ErrorHandler' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/ErrorHandler.php',
         'PhpParser\\ErrorHandler\\Collecting' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/ErrorHandler/Collecting.php',
         'PhpParser\\ErrorHandler\\Throwing' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/ErrorHandler/Throwing.php',
+        'PhpParser\\Internal\\DiffElem' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Internal/DiffElem.php',
+        'PhpParser\\Internal\\Differ' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Internal/Differ.php',
+        'PhpParser\\Internal\\PrintableNewAnonClassNode' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Internal/PrintableNewAnonClassNode.php',
+        'PhpParser\\Internal\\TokenStream' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Internal/TokenStream.php',
+        'PhpParser\\JsonDecoder' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/JsonDecoder.php',
         'PhpParser\\Lexer' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer.php',
         'PhpParser\\Lexer\\Emulative' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/Emulative.php',
+        'PhpParser\\NameContext' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/NameContext.php',
         'PhpParser\\Node' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node.php',
         'PhpParser\\NodeAbstract' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/NodeAbstract.php',
         'PhpParser\\NodeDumper' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/NodeDumper.php',
+        'PhpParser\\NodeFinder' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/NodeFinder.php',
         'PhpParser\\NodeTraverser' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/NodeTraverser.php',
         'PhpParser\\NodeTraverserInterface' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/NodeTraverserInterface.php',
         'PhpParser\\NodeVisitor' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/NodeVisitor.php',
         'PhpParser\\NodeVisitorAbstract' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/NodeVisitorAbstract.php',
+        'PhpParser\\NodeVisitor\\CloningVisitor' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/NodeVisitor/CloningVisitor.php',
+        'PhpParser\\NodeVisitor\\FindingVisitor' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/NodeVisitor/FindingVisitor.php',
+        'PhpParser\\NodeVisitor\\FirstFindingVisitor' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/NodeVisitor/FirstFindingVisitor.php',
         'PhpParser\\NodeVisitor\\NameResolver' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/NodeVisitor/NameResolver.php',
         'PhpParser\\Node\\Arg' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Arg.php',
         'PhpParser\\Node\\Const_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Const_.php',
@@ -2427,6 +2443,7 @@ class ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c
         'PhpParser\\Node\\Expr\\AssignOp\\BitwiseAnd' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/BitwiseAnd.php',
         'PhpParser\\Node\\Expr\\AssignOp\\BitwiseOr' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/BitwiseOr.php',
         'PhpParser\\Node\\Expr\\AssignOp\\BitwiseXor' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/BitwiseXor.php',
+        'PhpParser\\Node\\Expr\\AssignOp\\Coalesce' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/Coalesce.php',
         'PhpParser\\Node\\Expr\\AssignOp\\Concat' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/Concat.php',
         'PhpParser\\Node\\Expr\\AssignOp\\Div' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/Div.php',
         'PhpParser\\Node\\Expr\\AssignOp\\Minus' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/AssignOp/Minus.php',
@@ -2508,6 +2525,7 @@ class ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c
         'PhpParser\\Node\\Expr\\YieldFrom' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/YieldFrom.php',
         'PhpParser\\Node\\Expr\\Yield_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Expr/Yield_.php',
         'PhpParser\\Node\\FunctionLike' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/FunctionLike.php',
+        'PhpParser\\Node\\Identifier' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Identifier.php',
         'PhpParser\\Node\\Name' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Name.php',
         'PhpParser\\Node\\Name\\FullyQualified' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Name/FullyQualified.php',
         'PhpParser\\Node\\Name\\Relative' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Name/Relative.php',
@@ -2544,6 +2562,7 @@ class ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c
         'PhpParser\\Node\\Stmt\\Echo_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Echo_.php',
         'PhpParser\\Node\\Stmt\\ElseIf_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/ElseIf_.php',
         'PhpParser\\Node\\Stmt\\Else_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Else_.php',
+        'PhpParser\\Node\\Stmt\\Expression' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Expression.php',
         'PhpParser\\Node\\Stmt\\Finally_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Finally_.php',
         'PhpParser\\Node\\Stmt\\For_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/For_.php',
         'PhpParser\\Node\\Stmt\\Foreach_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Foreach_.php',
@@ -2575,6 +2594,7 @@ class ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c
         'PhpParser\\Node\\Stmt\\UseUse' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/UseUse.php',
         'PhpParser\\Node\\Stmt\\Use_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Use_.php',
         'PhpParser\\Node\\Stmt\\While_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/While_.php',
+        'PhpParser\\Node\\VarLikeIdentifier' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/VarLikeIdentifier.php',
         'PhpParser\\Parser' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Parser.php',
         'PhpParser\\ParserAbstract' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/ParserAbstract.php',
         'PhpParser\\ParserFactory' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/ParserFactory.php',
@@ -2683,6 +2703,7 @@ class ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c
         'Psr\\Log\\NullLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/NullLogger.php',
         'Psr\\Log\\Test\\DummyTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
         'Psr\\Log\\Test\\LoggerInterfaceTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
+        'Psr\\Log\\Test\\TestLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/TestLogger.php',
         'Psy\\CodeCleaner' => __DIR__ . '/..' . '/psy/psysh/src/CodeCleaner.php',
         'Psy\\CodeCleaner\\AbstractClassPass' => __DIR__ . '/..' . '/psy/psysh/src/CodeCleaner/AbstractClassPass.php',
         'Psy\\CodeCleaner\\AssignThisVariablePass' => __DIR__ . '/..' . '/psy/psysh/src/CodeCleaner/AssignThisVariablePass.php',
@@ -3430,6 +3451,8 @@ class ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c
         'Symfony\\Component\\Translation\\Extractor\\PhpExtractor' => __DIR__ . '/..' . '/symfony/translation/Extractor/PhpExtractor.php',
         'Symfony\\Component\\Translation\\Extractor\\PhpStringTokenParser' => __DIR__ . '/..' . '/symfony/translation/Extractor/PhpStringTokenParser.php',
         'Symfony\\Component\\Translation\\Formatter\\ChoiceMessageFormatterInterface' => __DIR__ . '/..' . '/symfony/translation/Formatter/ChoiceMessageFormatterInterface.php',
+        'Symfony\\Component\\Translation\\Formatter\\IntlFormatter' => __DIR__ . '/..' . '/symfony/translation/Formatter/IntlFormatter.php',
+        'Symfony\\Component\\Translation\\Formatter\\IntlFormatterInterface' => __DIR__ . '/..' . '/symfony/translation/Formatter/IntlFormatterInterface.php',
         'Symfony\\Component\\Translation\\Formatter\\MessageFormatter' => __DIR__ . '/..' . '/symfony/translation/Formatter/MessageFormatter.php',
         'Symfony\\Component\\Translation\\Formatter\\MessageFormatterInterface' => __DIR__ . '/..' . '/symfony/translation/Formatter/MessageFormatterInterface.php',
         'Symfony\\Component\\Translation\\IdentityTranslator' => __DIR__ . '/..' . '/symfony/translation/IdentityTranslator.php',
@@ -3460,6 +3483,7 @@ class ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c
         'Symfony\\Component\\Translation\\TranslatorBagInterface' => __DIR__ . '/..' . '/symfony/translation/TranslatorBagInterface.php',
         'Symfony\\Component\\Translation\\TranslatorInterface' => __DIR__ . '/..' . '/symfony/translation/TranslatorInterface.php',
         'Symfony\\Component\\Translation\\Util\\ArrayConverter' => __DIR__ . '/..' . '/symfony/translation/Util/ArrayConverter.php',
+        'Symfony\\Component\\Translation\\Util\\XliffUtils' => __DIR__ . '/..' . '/symfony/translation/Util/XliffUtils.php',
         'Symfony\\Component\\Translation\\Writer\\TranslationWriter' => __DIR__ . '/..' . '/symfony/translation/Writer/TranslationWriter.php',
         'Symfony\\Component\\Translation\\Writer\\TranslationWriterInterface' => __DIR__ . '/..' . '/symfony/translation/Writer/TranslationWriterInterface.php',
         'Symfony\\Component\\VarDumper\\Caster\\AmqpCaster' => __DIR__ . '/..' . '/symfony/var-dumper/Caster/AmqpCaster.php',
@@ -3638,11 +3662,11 @@ class ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitb6ca7d7c76d57a275ce3ac4c21eef99c::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitc6e58e693c639abb7ca75b51f2442c4e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitc6e58e693c639abb7ca75b51f2442c4e::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitc6e58e693c639abb7ca75b51f2442c4e::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitc6e58e693c639abb7ca75b51f2442c4e::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitc6e58e693c639abb7ca75b51f2442c4e::$classMap;
 
         }, null, ClassLoader::class);
     }

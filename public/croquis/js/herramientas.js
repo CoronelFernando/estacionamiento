@@ -123,8 +123,8 @@ function calles(width, height, id, estado){
   var divLineas = document.createElement('div');
   if(estado == 'horizontal'){
     divLineas.style.position = 'absolute';
-    divLineas.style.marginTop = '-4.7%';
-    var lineasCentrales = 6;
+    divLineas.style.marginTop = '-7.5%';
+    var lineasCentrales = 10;
     for(var j = 0; j < lineasCentrales; j++){
       divLineas.appendChild(lineasPunteadas('5%','10px'));
     }
