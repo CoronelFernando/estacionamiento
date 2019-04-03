@@ -4,6 +4,8 @@ var jsonData;
 obtenerEstadisticas();
 window.setInterval("obtenerEstadisticas()", 10000);
 function obtenerEstadisticas(){
+
+<<<<<<< HEAD
     var xml = new XMLHttpRequest();
     xml.open('GET', 'home/pieChart', true);
     xml.addEventListener('load', function(){
@@ -12,6 +14,15 @@ function obtenerEstadisticas(){
   });
   xml.send();
 }
+=======
+        var options = {
+          title: 'Smart Parking',
+          colors: ['#10ac84', "#ff6b6b", "#2e86de"],
+          height: 320,
+          width: 350,
+          pieHole: 0.4,
+        };
+>>>>>>> 764f0b2bcffaa796d0d4efdc004f70dea2eabe71
 
 function drawChartPie() {
   var data = google.visualization.arrayToDataTable([
