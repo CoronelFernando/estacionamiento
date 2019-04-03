@@ -31,7 +31,7 @@ function drawChart() {
         'height': 490,
         hAxis: {title: 'Horario', minValue: 0, maxValue: 4},
         vAxis: {title: 'Cajones Utilizados',  minValue: 0,
-            ticks: [0, 2, 4, 6]}
+            ticks: [0, 2, 4, 6, 8, 10, 12]}
         
     };
 

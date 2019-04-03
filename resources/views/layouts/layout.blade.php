@@ -5,6 +5,7 @@
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
   </head>
   <body id="page-top">
+     <input type="hidden" name="_token" value="{{ csrf_token() }}">
       @include('theme.header')
       <div id="alerta"></div>
         <div style="float: left">

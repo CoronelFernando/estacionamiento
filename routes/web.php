@@ -20,7 +20,9 @@
 Route::get('/', 'PrincipalController@index');
 Route::get('home', 'PrincipalController@index');
 Route::get('home/cajones', 'PrincipalController@cajones');
-//Route::get('home', 'EstadisticasController@index');
+Route::get('home/pieChart', 'PrincipalController@pieChart');
+Route::post('home/reservado', 'PrincipalController@reservado');
+Route::post('home/cajon', 'PrincipalController@cajon');
 
 //Pagina de estadisticas
 Route::get('estadisticas', 'EstadisticasController@index');

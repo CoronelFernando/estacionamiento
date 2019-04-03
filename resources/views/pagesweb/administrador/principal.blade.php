@@ -32,7 +32,7 @@
                 <div class=" col-sm-4">
                   <div class="card mb-3">
                     <div class="card-header">
-                      Recent Activities
+                      Recent Activitices
                     </div>
                     <div id="donutchart"></div>
                   </div>                                
@@ -53,7 +53,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Apartado</h4>
+          <h4 id="titleModal" class="modal-title">Apartado</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>          
         </div>
         <div class="modal-body">
