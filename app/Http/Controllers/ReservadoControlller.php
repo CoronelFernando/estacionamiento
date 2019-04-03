@@ -9,7 +9,7 @@ use App\Reservado;
 class ReservadoControlller extends Controller
 {
   public function index(){
-
+     return view('pagesweb/administrador/reservado');
   }
 
   public function create(){
@@ -36,7 +36,7 @@ class ReservadoControlller extends Controller
   }
 
   public function reservado($id){
-    $reservado = Reservado::select('res_id', 'res_usuario', 'res_cajon', 'res_hora', 'res_fechaApartado');
+    $reservado = Reservado::select('res_id', 'res_usuario', 'res_cajon', 'res_hora', 'res_fechaApartado')
     -> WHERE('reservados.res_id', $id);
     return Datatables::of($reservado)-make(true);
   }

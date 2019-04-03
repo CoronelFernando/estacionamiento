@@ -4,7 +4,6 @@ var jsonData;
 obtenerEstadisticas();
 window.setInterval("obtenerEstadisticas()", 10000);
 function obtenerEstadisticas(){
-
     var xml = new XMLHttpRequest();
     xml.open('GET', 'estadisticas/estadisticasGrafica', true);
     xml.addEventListener('load', function(){
@@ -14,10 +13,9 @@ function obtenerEstadisticas(){
   xml.send();
 }
 
-
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
-        ['Horas', 'Vacios', 'Ocupados'],
+        ['Horas', 'Disponibles', 'Ocupados'],
         [jsonData[0].hora,  jsonData[0].disponibles, jsonData[0].ocupados],
         [jsonData[1].hora,  jsonData[1].disponibles, jsonData[1].ocupados],
         [jsonData[2].hora,  jsonData[2].disponibles, jsonData[2].ocupados],

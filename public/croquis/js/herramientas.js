@@ -55,7 +55,7 @@ function logoCajon(estado, id, orientacion){
   image.style.width = '45px';
   image.style.height = '45px';
   if(estado == 1) image.src = 'croquis/image/vacio3.png';
-  else image.src = 'croquis/image/opcupado2.png';
+  else image.src = 'croquis/image/ocupado2.png';
   divLogoCajon.appendChild(image);
 
   return divLogoCajon;

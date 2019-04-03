@@ -16,9 +16,9 @@ function obtenerEstadisticas(){
 function drawChartPie() {
   var data = google.visualization.arrayToDataTable([
     ['Status', 'Quantity'],
-    ['Vacant',     jsonData[0].disponibles],
-    ['Occupied',      jsonData[0].ocupados],
-    ['Reserved',  jsonData[0].reservados]
+    ['Disponibles',     jsonData[0].disponibles],
+    ['Ocupados',      jsonData[0].ocupados],
+    ['Reservados',  jsonData[0].reservados]
   ]);
 
   var options = {
