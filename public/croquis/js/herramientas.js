@@ -27,7 +27,8 @@ function cajones(width, height, id, estado, orientacion){
   divCajon.style.width = width;
   divCajon.style.height = height;
   divCajon.style.float = 'left';
-  divCajon.setAttribute('onClick', 'show(id),obtenerReservados(this)');
+  //divCajon.setAttribute('onClick', 'show(id),obtenerReservados(this)');
+  divCajon.setAttribute('onClick', 'show(id)');
   var svg = svgs();
   var cajon = document.createElementNS(ns, 'rect');
   cajon.setAttributeNS(null, 'width', '100%');

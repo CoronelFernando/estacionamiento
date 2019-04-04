@@ -23,6 +23,8 @@ Route::get('home/cajones', 'PrincipalController@cajones');
 Route::get('home/pieChart', 'PrincipalController@pieChart');
 Route::post('home/reservado', 'PrincipalController@reservado');
 Route::post('home/cajon', 'PrincipalController@cajon');
+Route::post('home/GuardarReservado', 'ReservadoControlller@guardarReservado');
+//Route::post('home/ActualizarCajon', 'ReservadoControlller@ActualizarCajon');
 
 //Pagina de estadisticas
 Route::get('estadisticas', 'EstadisticasController@index');

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\Reservado;
+use App\Cajon;
+use Carbon\Carbon;
 
 class ReservadoControlller extends Controller
 {
@@ -45,4 +47,34 @@ class ReservadoControlller extends Controller
     $reservados = Reservado::select('res_id', 'res_usuario', 'res_cajon', 'res_hora', 'res_fechaApartado');
     return Datatables::of($reservados)-make(true);
   }
+
+  public function guardarReservado(Request $request){
+    $reservado = new Reservado;
+    $reservado->res_usuario_id = $request['usuario'];
+    $reservado->res_cajon_id = $request['cajon'];
+    $reservado->res_tiempoReservado = $request['tiempo'];
+    //aqui obtengo la fecha y la hora
+    $hoy = Carbon::today()->toDateString();
+    $tiempo = Carbon::now()->toTimeString();
+
+    $reservado->res_dia = $hoy;
+    $reservado->res_hora = $tiempo;
+    $reservado->res_status_id = 3;
+    if($reservado->save()){
+      $id = $request['cajon'];
+      $cajon = Cajon::find($id);
+      //dd($cajon->caj_status_id);
+      $cajon->caj_status_id = 3;
+
+      if( $cajon->save() ){ return "true"; } else { return "true"; }
+    } 
+    else{ Return "false"; }
+  }
+
+ /* public function ActualizarCajon(Request $request){
+    $id = $request['id'];
+    $cajon = new Cajon::find($id);
+    $cajon->caj_status_id = 
+    
+  }*/
 }

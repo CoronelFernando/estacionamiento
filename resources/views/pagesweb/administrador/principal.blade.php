@@ -79,7 +79,7 @@
           </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal" id="btnConfirmar">Confirmar</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal" id="btnConfirmar" onclick="GuardarReservado()">Confirmar</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnCerrar" onclick="LimpiarModal()">Cerrar</button>
       </div>
     </div>
