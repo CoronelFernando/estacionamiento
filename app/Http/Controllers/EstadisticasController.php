@@ -97,8 +97,8 @@ class EstadisticasController extends Controller
      $ocupadosHora = DB::table('estadisticascajones')->select(
       DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 1) AS disponibles'),
       DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 2) AS ocupados'),
-      //DB::raw('CONCAT(estCaj_fechaFin, " ", estCaj_horaFin) AS hora'))
-      DB::raw('CONCAT(estCaj_horaFin) AS hora'))
+      DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 3) AS reservados'),
+      DB::raw('estCaj_horaFin AS hora'))
      ->limit(10)
      ->orderby('estCaj_fechaFin', 'DESC')
      ->orderby('estCaj_horaFin', 'DESC')
