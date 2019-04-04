@@ -23,7 +23,7 @@ function drawChartPie() {
 
   var options = {
     title: 'Smart Parking',
-    colors: ['#10ac84', "#ff6b6b", "#2e86de"],
+    colors: ['#10ac84', "#ff6b6b", "#0984e3"],
     height: 320,
     width: 400,
     pieHole: 0.4,

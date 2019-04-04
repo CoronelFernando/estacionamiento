@@ -67,7 +67,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #cccccc;
+  background-color: #eeeeee;
 }
 
 [tabindex="-1"]:focus {
@@ -5181,7 +5181,7 @@ input[type="button"].btn-block {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #e9ecef;
+  background-color: #eeeeee;
   border-radius: 0.25rem;
 }
 
@@ -10702,7 +10702,7 @@ footer.sticky-footer {
   bottom: 0;
   width: calc(100% - 90px);
   height: 80px;
-  background-color: #e9ecef;
+  background-color: #b2bec3;
 }
 
 footer.sticky-footer .copyright {

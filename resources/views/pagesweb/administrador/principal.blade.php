@@ -12,34 +12,14 @@
               </li>
               <li class="breadcrumb-item active">Map</li>
             </ol>
-          <div class="card mb-3">
-            <div class="card-header">
-              Map
-            </div>
-            <div class="card-body">
               <div class="row">
                 <div class="col-8">
-                  <div class="card">
-                    <div class="card-header">
-                      Parking Space
-                    </div>
-                    <div class="card-body">
-                      <div id="contenedor" class="contenedor"></div>
-                    </div>
-                  </div>
+                  <div id="contenedor" class="contenedor"></div>
                 </div>
-               
                 <div class=" col-sm-4">
-                  <div class="card mb-3">
-                    <div class="card-header">
-                      Recent Activitices
-                    </div>
-                    <div id="donutchart"></div>
-                  </div>                                
+                  <div id="donutchart"></div>                                                 
                 </div>
               </div>
-            </div>
-            <div class="card-footer small text-muted">Update yesterday at 11:59 PM</div>
           </div>
         </div>
       </div>        
