@@ -104,9 +104,9 @@ class HistorialController extends Controller
     ->orderby('estCaj_fechaFin', 'DESC')
     ->orderby('estCaj_horaFin', 'DESC');*/
     
-    $historialCajon = DB::table('hitorialCajones');
+    $historialCajon = DB::table('hitorialCajones')
+    ->orderby('estCaj_fechaFin', 'DESC');
 
     return Datatables::of($historialCajon)->make(true);
   }
-
 }

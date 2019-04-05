@@ -47,8 +47,12 @@
               <label>No. Cajon:</label>
               <input class="form-control" id="txtCajon" name="txtCajon" readonly>
            </div>
+           <div class="form-group">
+              <label>Hora de Reservación:</label>
+              <input type="time" class="form-control" id="txthora" name="txthora">
+           </div>
             <div class="form-group">
-              <label>Tiempo:</label>
+              <label>Tiempo Reservado:</label>
               <!--<input class="form-control" id="txtTiempo" name="txtTiempo">-->
                   <select id="txtTiempo" class="form-control" name="txtTiempo">
                     <!--<option selected="true" disabled="disabled">Seleccione Tiempo</option>

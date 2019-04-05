@@ -17,7 +17,7 @@
                         Reservation
                     </div>
                     <div class="card-body">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" id="tbReservados">
                             <thead>
                                 <tr>
                                     <th>Usuario</th>

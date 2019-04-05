@@ -2,7 +2,7 @@ google.charts.load("current", {packages:["corechart"]});
 google.charts.setOnLoadCallback(drawChart);
 var jsonData;
 obtenerEstadisticas();
-window.setInterval("obtenerEstadisticas()", 10000);
+window.setInterval("obtenerEstadisticas()", 8000);
 function obtenerEstadisticas(){
     var xml = new XMLHttpRequest();
     xml.open('GET', 'home/pieChart', true);

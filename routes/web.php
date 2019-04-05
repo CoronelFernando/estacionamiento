@@ -24,16 +24,18 @@ Route::get('home/pieChart', 'PrincipalController@pieChart');
 Route::post('home/reservado', 'PrincipalController@reservado');
 Route::post('home/cajon', 'PrincipalController@cajon');
 Route::post('home/GuardarReservado', 'ReservadoControlller@guardarReservado');
-//Route::post('home/ActualizarCajon', 'ReservadoControlller@ActualizarCajon');
+Route::get('home/horaActual', 'PrincipalController@obtenerHoraActual');
 
 //Pagina de estadisticas
 Route::get('estadisticas', 'EstadisticasController@index');
 Route::post('estadisticas/DesplegarCajones', 'CajonControlller@allCajones');
 Route::post('estadisticas/numeroOcupados', 'EstadisticasController@desplegarNumeroOcupados');
 Route::get('estadisticas/estadisticasGrafica', 'EstadisticasController@estadisticasParaGrafica');
+Route::get('estadisticas/estadisticasGraHor', 'EstadisticasController@estParaGraHor');
 
 // Pagina de reservacion
 Route::get('reservados', 'ReservadoControlller@index');
+Route::get('reservados/list', 'ReservadoControlller@list');
 
 //Graficas
 Route::get('estadisticas/autosPorHora', 'EstadisticasController@autosPorHora');

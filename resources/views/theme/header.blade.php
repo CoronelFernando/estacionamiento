@@ -1,6 +1,6 @@
  <nav class="navbar navbar-expand static-top text-white">
     <a href="{{url('home')}}" class="text-white"><i class="fa fa-car"></i>&nbsp;</a>
-    <a class="navbar-brand mr-1 text-white" href="#">SmartParking</a>
+    <a class="navbar-brand mr-1 text-white" href="{{url('home')}}">SmartParking</a>
     <button class="btn btn-link btn-lg text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fa fa-bars"></i>
     </button>

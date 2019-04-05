@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Yajra\Datatables\facades\Datatables;
 use DB;
 use App\Reservado;
 use App\Cajon;
@@ -58,7 +59,8 @@ class ReservadoControlller extends Controller
     $tiempo = Carbon::now()->toTimeString();
 
     $reservado->res_dia = $hoy;
-    $reservado->res_hora = $tiempo;
+    //dd($request['hora']);
+    $reservado->res_hora = $request['hora'];
     $reservado->res_status_id = 3;
     if($reservado->save()){
       $id = $request['cajon'];
@@ -71,10 +73,8 @@ class ReservadoControlller extends Controller
     else{ Return "false"; }
   }
 
- /* public function ActualizarCajon(Request $request){
-    $id = $request['id'];
-    $cajon = new Cajon::find($id);
-    $cajon->caj_status_id = 
-    
-  }*/
+ public function list(){
+    $verReservados = DB::table('verReservaciones');
+   return Datatables::of($verReservados)->make(true); 
+  }
 }

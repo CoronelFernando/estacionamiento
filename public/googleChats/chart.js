@@ -1,14 +1,27 @@
 google.charts.load('visualization', "1", {packages: ['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 var jsonData;
+var jsonDataHora;
+//OBTIENE EL ESTADOS DE LOS CAJONES
 obtenerEstadisticasArea();
-window.setInterval("obtenerEstadisticasArea()", 10000);
+window.setInterval("obtenerEstadisticasArea()", 8000);
 function obtenerEstadisticasArea(){
     var xml = new XMLHttpRequest();
     xml.open('GET', 'estadisticas/estadisticasGrafica', true);
     xml.addEventListener('load', function(){
     jsonData = JSON.parse(xml.responseText);
+    obtenerEstadisticasHora();
     drawChart();
+  });
+  xml.send();
+}
+
+//OBTIENE LAS HORAS DE LAS ESTADISTICAS
+function obtenerEstadisticasHora(){
+    var xml = new XMLHttpRequest();
+    xml.open('GET', 'estadisticas/estadisticasGraHor', true);
+    xml.addEventListener('load', function(){
+    jsonDataHora = JSON.parse(xml.responseText);
   });
   xml.send();
 }
@@ -16,11 +29,13 @@ function obtenerEstadisticasArea(){
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
         ['Horas', 'Disponibles', 'Ocupados', 'Reservados'],
-        [jsonData[0].hora,  jsonData[0].disponibles, jsonData[0].ocupados, jsonData[0].reservados],
-        [jsonData[1].hora,  jsonData[1].disponibles, jsonData[1].ocupados, jsonData[0].reservados],
-        [jsonData[2].hora,  jsonData[2].disponibles, jsonData[2].ocupados, jsonData[0].reservados],
-        [jsonData[3].hora,  jsonData[3].disponibles, jsonData[3].ocupados, jsonData[0].reservados],
-        [jsonData[4].hora,  jsonData[4].disponibles, jsonData[4].ocupados, jsonData[0].reservados],
+        [jsonDataHora[6].hora,  jsonData[6].disponibles, jsonData[6].ocupados, jsonData[6].reservados],
+        [jsonDataHora[5].hora,  jsonData[5].disponibles, jsonData[5].ocupados, jsonData[5].reservados],
+        [jsonDataHora[4].hora,  jsonData[4].disponibles, jsonData[4].ocupados, jsonData[4].reservados],
+        [jsonDataHora[3].hora,  jsonData[3].disponibles, jsonData[3].ocupados, jsonData[3].reservados],
+        [jsonDataHora[2].hora,  jsonData[2].disponibles, jsonData[2].ocupados, jsonData[2].reservados],
+        [jsonDataHora[1].hora,  jsonData[1].disponibles, jsonData[1].ocupados, jsonData[1].reservados],
+        [jsonDataHora[0].hora,  jsonData[0].disponibles, jsonData[0].ocupados, jsonData[0].reservados],
       ]);
 
     var options = {

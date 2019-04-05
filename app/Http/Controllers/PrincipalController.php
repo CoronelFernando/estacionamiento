@@ -52,4 +52,9 @@ class PrincipalController extends Controller
 	     ->limit(1)->get()->toJson();
     	return $reservado;
     }
+
+    public function obtenerHoraActual(){
+      $horaActual = Carbon::now()->toTimeString();
+      return $horaActual;
+    }
 }

@@ -9,7 +9,7 @@
 	    <li class="nav-item">
 	        <a class="nav-link" href="{{url('estadisticas')}}">
 	            <i class="fas fa-signal"></i>
-	            <span>&nbsp;Stadistic</span>
+	            <span>&nbsp;Statistic</span>
 	        </a>
 	    </li>
 	    <li class="nav-item">

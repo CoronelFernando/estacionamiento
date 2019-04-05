@@ -41,6 +41,7 @@ function cajones(width, height, id, estado, orientacion){
   svg.appendChild(cajon);
   divCajon.appendChild(svg);
   divCajon.appendChild(logoCajon(estado, 'logo', orientacion));
+  divCajon.appendChild(tituloCajon(('Cajon ' + id)));
 
   return divCajon;
 }
@@ -62,6 +63,20 @@ function logoCajon(estado, id, orientacion){
   divLogoCajon.appendChild(image);
 
   return divLogoCajon;
+}
+
+//FUNCION QUE NOS RETORNA EL ID DEL CAJON
+//NOS RETORNA UN DIV
+function tituloCajon(texto){
+  var div = document.createElement('div');
+  div.style.textAlign = 'center';
+  div.style.top = '-100px';
+  div.style.display = 'block';
+  var label = document.createElement('label');
+  label.textContent = texto;
+  label.style.fontSize = '10pt';
+  div.appendChild(label);
+  return div;
 }
 
 //FUNCION QUE GENERA LAS LINEAS AMARILAS

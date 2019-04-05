@@ -94,20 +94,24 @@ class EstadisticasController extends Controller
     $ocupados = DB::table('cajones')->select('caj_id')
      ->count()
      ->union($fechaYHora)->get()->toJson();*/
-     $ocupadosHora = DB::table('estadisticascajones')->select(
+     $ocupadosEstado = DB::table('estadisticascajones')->select(
       DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 1) AS disponibles'),
       DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 2) AS ocupados'),
-      DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 3) AS reservados'),
-      DB::raw('estCaj_horaFin AS hora'))
+      DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 3) AS reservados'))
+      //DB::raw('estCaj_horaFin AS hora'))
      ->limit(10)
      ->orderby('estCaj_fechaFin', 'DESC')
      ->orderby('estCaj_horaFin', 'DESC')
      ->get()->toJson();
-
-
-
-
      //return Datatables::of($ocupadosHora)->make(true);
+    return $ocupadosEstado;
+  }
+
+  public function estParaGraHor(){
+    $ocupadosHora = DB::table('estadisticascajones')->select('estCaj_fechaFin AS fecha', 'estCaj_horaFin AS hora')
+    ->limit(10)
+    ->orderby('estCaj_id', 'DESC')
+    ->get()->toJson();
     return $ocupadosHora;
   }
 
