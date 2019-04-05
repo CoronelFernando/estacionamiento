@@ -38,6 +38,7 @@ return array(
     'App\\Status' => $baseDir . '/app/Status.php',
     'App\\User' => $baseDir . '/app/User.php',
     'App\\reportes' => $baseDir . '/app/reportes.php',
+    'App\\tiemposReservados' => $baseDir . '/app/tiemposReservados.php',
     'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
     'AssertionError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',

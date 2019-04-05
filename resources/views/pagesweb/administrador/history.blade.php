@@ -10,26 +10,20 @@
           </li>
           <li class="breadcrumb-item active">Statistics</li>
         </ol>
-        <div class="card mb-3">
-            <div class="card-header">
-                Stadistics
-            </div>
-        <div class="card-body">
-            <table id="dtHistorialCajon" class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Cajon</th>
-                        <th>Seccion</th>
-                        <th>Disponibilidad</th>
-                        <th>Fecha</th>
-                        <th>Hora</th>
-                    </tr>
-                </thead>
-                <tbody>
-                        </tbody>
-            </table>
-        </div> 
-        <div class="card-footer small text-muted">Update yesterday at 11:59 PM</div>
+        <hr>
+        <table id="dtHistorialCajon" class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Cajon</th>
+              <th>Seccion</th>
+              <th>Disponibilidad</th>
+              <th>Fecha</th>
+              <th>Hora</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>				

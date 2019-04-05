@@ -67,7 +67,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #eeeeee;
+  background-color: #ffffff;
 }
 
 [tabindex="-1"]:focus {
@@ -10490,7 +10490,7 @@ body {
 
 .sidebar {
   width: 90px !important;
-  background-color: #ffffff;
+  background-color: #f5f6fa;
   min-height: calc(100vh - 56px);
 }
 
@@ -10702,7 +10702,7 @@ footer.sticky-footer {
   bottom: 0;
   width: calc(100% - 90px);
   height: 80px;
-  background-color: #b2bec3;
+  background-color: #f1f2f6;
 }
 
 footer.sticky-footer .copyright {

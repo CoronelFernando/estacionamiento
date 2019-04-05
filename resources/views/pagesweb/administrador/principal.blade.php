@@ -12,6 +12,7 @@
               </li>
               <li class="breadcrumb-item active">Map</li>
             </ol>
+            <hr>
               <div class="row">
                 <div class="col-8">
                   <div id="contenedor" class="contenedor"></div>

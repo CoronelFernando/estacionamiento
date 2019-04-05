@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc6e58e693c639abb7ca75b51f2442c4e
+class ComposerStaticInit2051711785b2fb8449bebe0bfb991e2a
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -342,6 +342,7 @@ class ComposerStaticInitc6e58e693c639abb7ca75b51f2442c4e
         'App\\Status' => __DIR__ . '/../..' . '/app/Status.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\reportes' => __DIR__ . '/../..' . '/app/reportes.php',
+        'App\\tiemposReservados' => __DIR__ . '/../..' . '/app/tiemposReservados.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
@@ -3662,11 +3663,11 @@ class ComposerStaticInitc6e58e693c639abb7ca75b51f2442c4e
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc6e58e693c639abb7ca75b51f2442c4e::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc6e58e693c639abb7ca75b51f2442c4e::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInitc6e58e693c639abb7ca75b51f2442c4e::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitc6e58e693c639abb7ca75b51f2442c4e::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitc6e58e693c639abb7ca75b51f2442c4e::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2051711785b2fb8449bebe0bfb991e2a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2051711785b2fb8449bebe0bfb991e2a::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit2051711785b2fb8449bebe0bfb991e2a::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit2051711785b2fb8449bebe0bfb991e2a::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit2051711785b2fb8449bebe0bfb991e2a::$classMap;
 
         }, null, ClassLoader::class);
     }
