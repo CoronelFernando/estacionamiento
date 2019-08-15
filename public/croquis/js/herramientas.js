@@ -4,7 +4,7 @@
 //#FFFFFF blanco
 //#9E9E9E gris
 //#000000 negro
-var contenedor = document.getElementById('contenedor');
+var container = document.getElementById('container');
 //contenedor.style.height = '100%';
 var ns = 'http://www.w3.org/2000/svg';
 
@@ -21,29 +21,39 @@ function svgs(){
 
 //FUNCION QUE GENERA UN CAJON
 //NOS RETORNA UN DIV
-function cajones(width, height, id, estado, orientacion){
-  var divCajon = document.createElement('div');
-  divCajon.id = id;
-  divCajon.style.width = width;
-  divCajon.style.height = height;
-  divCajon.style.float = 'left';
+function drawer(width, height, id, status, orientation){
+  var divDrawer = document.createElement('div');
+  divDrawer.id = id;
+  divDrawer.style.width = width;
+  divDrawer.style.height = height;
+  divDrawer.style.float = 'left';
   //divCajon.setAttribute('onClick', 'show(id),obtenerReservados(this)');
-  divCajon.setAttribute('onClick', 'show(id)');
+  divDrawer.setAttribute('onClick', 'show(id)');
   var svg = svgs();
-  var cajon = document.createElementNS(ns, 'rect');
-  cajon.setAttributeNS(null, 'width', '100%');
-  cajon.setAttributeNS(null, 'height', '100%');
-  if(estado == 1) cajon.setAttributeNS(null, 'fill', '#10ac84'); //verde/disponible
-  else if (estado == 2) cajon.setAttributeNS(null, 'fill', '#ff6b6b'); //rojo/no disponible
-  else if (estado == 3) cajon.setAttributeNS(null, 'fill', '#0984e3'); //Azul/no disponible
-  cajon.setAttributeNS(null, 'rx', '0');
-  cajon.setAttributeNS(null, 'ry', '0');
-  svg.appendChild(cajon);
-  divCajon.appendChild(svg);
-  divCajon.appendChild(logoCajon(estado, 'logo', orientacion));
-  divCajon.appendChild(tituloCajon(('Cajon ' + id)));
+  var drawer = document.createElementNS(ns, 'rect');
+  drawer.setAttributeNS(null, 'width', '100%');
+  drawer.setAttributeNS(null, 'height', '100%');
+  drawer.setAttributeNS(null, 'fill', '#9E9E9E');
+  //if(status == 1) drawer.setAttributeNS(null, 'fill', '#E4E4E4'); //verde/disponible
+  //else if (status == 2) drawer.setAttributeNS(null, 'fill', '#ff6b6b'); //rojo/no disponible
+  //else if (status == 3) drawer.setAttributeNS(null, 'fill', '#0984e3'); //Azul/no disponible
+  drawer.setAttributeNS(null, 'rx', '0');
+  drawer.setAttributeNS(null, 'ry', '0');
+  svg.appendChild(drawer);
+  
 
-  return divCajon;
+  // SVG CAR
+  if(status == 1) svg.appendChild(drawCarLayout(id, '#B4B4B4', new Point(20,50)));
+  if(status == 2) svg.appendChild(drawCarLayout(id, '#ff0000', new Point(20,50)));
+  if(status == 3) svg.appendChild(drawCarLayout(id, '#0984e3', new Point(20,50)));
+  svg.appendChild(drawPrincipalGlass('top', new Point(20,50)));
+  svg.appendChild(drawPrincipalGlass('bottom', new Point(20,50)));
+  svg.appendChild(drawLateralGlass('left', new Point(20,50)));
+  svg.appendChild(drawLateralGlass('right', new Point(20,50)));
+  drawFrontLights(svg,new Point(20,50));
+  divDrawer.appendChild(svg, new Point(20,50));
+  //divDrawer.appendChild(iconCar('prueba','#FFFF00',new Point(100,100),'100px','100px'));
+  return divDrawer;
 }
 
 //FUNCION QUE GENERA EL LOGO DEL CAJON
@@ -65,18 +75,23 @@ function logoCajon(estado, id, orientacion){
   return divLogoCajon;
 }
 
-//FUNCION QUE NOS RETORNA EL ID DEL CAJON
-//NOS RETORNA UN DIV
-function tituloCajon(texto){
-  var div = document.createElement('div');
-  div.style.textAlign = 'center';
-  div.style.top = '-100px';
-  div.style.display = 'block';
-  var label = document.createElement('label');
-  label.textContent = texto;
-  label.style.fontSize = '10pt';
-  div.appendChild(label);
-  return div;
+function iconCar(id, color, startPoint, width, height,){
+  var divIconCar = document.createElement('div');
+  divIconCar.style.width = width;
+  divIconCar.style.height = height;
+  divIconCar.style.float = 'left';
+  var svg = svgs();
+  svg.appendChild(drawCarLayout(id, color, startPoint));
+  svg.appendChild(drawPrincipalGlass('top', startPoint));
+  svg.appendChild(drawPrincipalGlass('bottom',startPoint));
+  svg.appendChild(drawLateralGlass('left', startPoint));
+  svg.appendChild(drawLateralGlass('right',startPoint));
+  drawFrontLights(svg,startPoint);
+
+  divIconCar.appendChild(svg);
+
+  return divIconCar;
+
 }
 
 //FUNCION QUE GENERA LAS LINEAS AMARILAS
@@ -93,7 +108,7 @@ function lineasAmarillas(width, height, id){
   var lineaAmarilla = document.createElementNS(ns, 'rect');
   lineaAmarilla.setAttributeNS(null, 'width', '100%');
   lineaAmarilla.setAttributeNS(null, 'height', '100%');
-  lineaAmarilla.setAttributeNS(null, 'fill', '#feca57');
+  lineaAmarilla.setAttributeNS(null, 'fill', '#B9BDBE');
   //lineaAmarilla.setAttributeNS(null, 'rx', '0');
   //lineaAmarilla.setAttributeNS(null, 'ry', '0');
   svg.appendChild(lineaAmarilla);
@@ -108,18 +123,55 @@ function banquetas(width, height, id){
   var divbanqueta = document.createElement('div');
   divbanqueta.style.width = width;
   divbanqueta.style.height = height;
-  divbanqueta.style.float = 'left';
+  divbanqueta.style.marginTop = '-7px';
+  divbanqueta.style.float = 'left'; 
   divbanqueta.id = id;
   var svg = svgs();
   var banqueta = document.createElementNS(ns, 'rect');
   banqueta.setAttributeNS(null, 'width', '100%');
   banqueta.setAttributeNS(null, 'height', '100%');
-  banqueta.setAttributeNS(null, 'fill', '#95a5a6');
+  banqueta.setAttributeNS(null, 'fill', '#B9BDBE');  
   svg.appendChild(banqueta);
   divbanqueta.appendChild(svg);
 
   return divbanqueta;
 }
+
+function banqueta(width, height, id){
+  var divbanqueta = document.createElement('div');
+  divbanqueta.style.width = width;
+  divbanqueta.style.height = height;
+  divbanqueta.style.marginTop = '-7px';
+  divbanqueta.style.float = 'left'; 
+  divbanqueta.id = id;
+  var svg = svgs();
+  var banqueta = document.createElementNS(ns, 'rect');
+  banqueta.setAttributeNS(null, 'width', '100%');
+  banqueta.setAttributeNS(null, 'height', '100%');
+  banqueta.setAttributeNS(null, 'fill', '#EBEFF2');  
+  svg.appendChild(banqueta);
+  divbanqueta.appendChild(svg);
+
+  return divbanqueta;
+}
+
+function edificio(width, height, id){
+  var divedificio = document.createElement('div');
+  divedificio.style.width = width;
+  divedificio.style.height = height;
+  divedificio.style.float = 'left';
+  divedificio.id = id;
+  var svg = svgs();
+  var edificio = document.createElementNS(ns, 'rect');
+  edificio.setAttributeNS(null, 'width', '100%');
+  edificio.setAttributeNS(null, 'height', '100%');
+  edificio.setAttributeNS(null, 'fill', '#E4E4E4');
+  svg.appendChild(edificio);
+  divedificio.appendChild(svg);
+
+  return divedificio;
+}
+
 
 //FUNCION QUE GENERA LA CALLE
 //NOS RETORNA UN DIV
@@ -133,7 +185,7 @@ function calles(width, height, id, estado){
   var calle = document.createElementNS(ns, 'rect');
   calle.setAttributeNS(null, 'width', '100%');
   calle.setAttributeNS(null, 'height', '100%');
-  calle.setAttributeNS(null, 'fill', '#34495e');
+  calle.setAttributeNS(null, 'fill', '#b0bec5');
   svg.appendChild(calle);
   divCalles.appendChild(svg);
 
@@ -177,4 +229,128 @@ function lineasPunteadas(width, height, id){
   divLineaPunteada.appendChild(svg);
 
   return divLineaPunteada;
+}
+
+//--------------------------------------------------------------------------------------------------
+//ICONO CAJON
+//--------------------------------------------------------------------------------------------------
+
+//FUNCION QUE DIBUJA EL LAYOUT DEL AUTO
+//@id INDICA EL ID DEL AUTO
+//@color INDICA EL COLOR DEL AUTO
+//@startPoint INDICA EL PUNTO DONDE SE VA A EMPEZAR A DIBUJAR
+function drawCarLayout(id,color, startPoint){
+  var carLayout = document.createElementNS(ns, 'path');
+  carLayout.id = id;
+  carLayout.style.fill = color;
+
+  var path = 'M' + startPoint.x + ',' + startPoint.y; + ' '; // INICIA
+  path += 'A3,1 0 0,1 ' + (startPoint.x + 100) + ',' + startPoint.y + ' '; // DERECHA SE CREA ARCO
+  path += 'L ' + (startPoint.x + 100) + ',' + (startPoint.y + 35) + ' '; // BAJA
+  path += 'L ' + (startPoint.x + 110) + ',' + (startPoint.y + 35) + ' '; // DERECHA SE CREA ESPEJO RETROVISOR
+  path += 'L ' + (startPoint.x + 110) + ',' + (startPoint.y + 40) + ' '; // BAJA SE CREA ESPEJO RETROVISOR
+  path += 'L ' + (startPoint.x + 100) + ',' + (startPoint.y + 40) + ' '; // IZQUIERDA SE CREA ESPEJO RETROVISOR
+  path += 'L ' + (startPoint.x + 100) + ',' + (startPoint.y + 130) + ' '; // BAJA
+  path += 'A3,1 0 1,1  ' + startPoint.x + ',' + (startPoint.y + 130) + ' '; // IZQUIERA SE CREA ARCO
+  path += 'L ' + (startPoint.x) + ',' + (startPoint.y + 35) + ' '; // SUBE
+  path += 'L ' + (startPoint.x - 10) + ',' + (startPoint.y + 35) + ' '; // IZQUIERDA SE CREA ESPEJO RETROVISOR
+  path += 'L ' + (startPoint.x - 10) + ',' + (startPoint.y + 40) + ' '; // SUBE SE CREA ESPEJO RETROVISOR
+  path += 'L ' + (startPoint.x) + ',' + (startPoint.y + 40) + ' Z'; // DERECHA SE CREA ESPEJO RETROVISOR
+  
+  carLayout.setAttribute('d', path);
+
+  return carLayout;
+}
+
+//FUNCION QUE DIBUJA LAS VENTANASPRINCIPALES DEL AUTO
+//@orientacion INDICA HACIA DONDE ESTA MIRANDO EL AUTO
+//@startPoint INDICA EL PUNTO DONDE SE VA A EMPEZAR A DIBUJAR
+function drawPrincipalGlass(orientacion, startPoint){
+  var principalGlass = document.createElementNS(ns, 'path');
+  principalGlass.style.fill = '#000';
+  //principalGlass.id = id;
+  var path = '';
+  if(orientacion == 'top'){
+      //path = 'M120,140 A3,1 0 0,1 180,140 L170,155 L130,155 Z';
+      path = 'M' + (startPoint.x + 21) + ',' + (startPoint.y + 40) + ' ';
+      path += 'A3,1 0 0,1 ' + (startPoint.x + 81) + ',' + (startPoint.y + 40) + ' ';
+      path += 'L' + (startPoint.x + 71) + ',' + (startPoint.y + 55) +  '';
+      path += 'L' + (startPoint.x + 31) + ',' + (startPoint.y + 55) +  ' Z';
+  }
+  
+  if(orientacion == 'bottom'){
+      //path = 'M120,220 A3,1 0 1,0 180,220 L170,205 L130,205 Z';
+      path = 'M' + (startPoint.x + 21) + ',' + (startPoint.y + 120) + ' ';
+      path += 'A3,1 0 1,0 ' + (startPoint.x + 82) + ',' + (startPoint.y + 120) + ' ';
+      path += 'L' + (startPoint.x + 71) + ',' + (startPoint.y + 105) +  '';
+      path += 'L' + (startPoint.x + 31) + ',' + (startPoint.y + 105) +  ' Z';
+  }
+
+  principalGlass.setAttribute('d', path);
+
+  return principalGlass;
+}
+
+//FUNCION QUE DIBUJA LAS VENTANAS LATERALES DEL AUTO
+//@orientacion INDICA HACIA DONDE ESTA MIRANDO EL AUTO
+//@startPoint INDICA EL PUNTO DONDE SE VA A EMPEZAR A DIBUJAR
+function drawLateralGlass(orientacion, startPoint){
+  var lateralGlass = document.createElementNS(ns, 'path');
+  lateralGlass.style.fill = '#000';
+  //principalGlass.id = id;
+  var path = '';
+  if(orientacion == 'left'){
+      //path = 'M185,155 L185,205 L175,200 L175,160 Z';
+      path = 'M' + (startPoint.x + 86) + ',' + (startPoint.y + 55) + ' '; // INICIA
+      path += 'L' + (startPoint.x + 86) + ',' + (startPoint.y + 105) + ' '; // BAJA
+      path += 'L' + (startPoint.x + 76) + ',' + (startPoint.y + 95) + ' '; // IZQUIERDA
+      path += 'L' + (startPoint.x + 76) + ',' + (startPoint.y + 65) + ' Z'; // SUBE
+  }
+  
+  if(orientacion == 'right'){
+      //path = 'M115,155 L115,205 L125,200 L125,160 Z';
+      //path = 'M' + (startPoint.x + 15) + ',' + (startPoint.y + 55) + ' L115,205 L125,200 L125,160 Z';
+      path = 'M' + (startPoint.x + 16) + ',' + (startPoint.y + 55) + ' '; // INICIA
+      path += 'L' + (startPoint.x + 16) + ',' + (startPoint.y + 105) + ' '; // BAJA
+      path += 'L' + (startPoint.x + 26) + ',' + (startPoint.y + 95) + ' '; // DERECHA
+      path += 'L' + (startPoint.x + 26) + ',' + (startPoint.y + 65) + ' Z'; // SUBE
+  }
+  
+  lateralGlass.setAttribute('d', path);
+
+  return lateralGlass;
+}
+
+// FUNCION QUE DIBUJA LAS LUCES DELANTERAS DEL AUTO
+//@svg RECIBE EL SBG DONDE SE VA A DIBUJAR
+//@startPoint INDICA EL PUNTO DONDE SE VA A EMPEZAR A DIBUJAR
+function drawFrontLights(svg,startPoint){
+
+  var x = startPoint.x + 15;
+
+  for(var i = 0; i < 2; i++){
+      var frontLightsLeft = document.createElementNS(ns, 'path');
+      frontLightsLeft.style.fill = '#FFFF00';
+      var path = '';
+      path = 'M' + (x) + ',' + (startPoint.y - 10) + ' ';
+      path += 'h10 ';
+      path += 'a5,5 0 0 1 2,2 ';
+      path += 'v5 ';
+      path += 'a5,5 0 0 1 -2,2 ';
+      path += 'h-10 ';
+      path += 'a5,5 0 0 1 -2,-2 ';
+      path += 'v-5 ';
+      path += 'a5,5 0 0 1 2,-2 z';
+  
+      frontLightsLeft.setAttribute('d', path);
+    
+      svg.append(frontLightsLeft);
+      
+      x += 60;
+  }
+}
+
+function Point(x, y) {
+if (typeof x !== 'undefined') this.x = x;
+if (typeof y !== 'undefined') this.y = y;
 }

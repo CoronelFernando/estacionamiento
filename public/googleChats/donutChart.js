@@ -8,7 +8,7 @@ function obtenerEstadisticas(){
     xml.open('GET', 'home/pieChart', true);
     xml.addEventListener('load', function(){
     jsonData = JSON.parse(xml.responseText);
-    drawChartPie();
+    //drawChartPie();
   });
   xml.send();
 }
@@ -25,7 +25,7 @@ function drawChartPie() {
     title: 'Smart Parking',
     colors: ['#10ac84', "#ff6b6b", "#0984e3"],
     height: 320,
-    width: 400,
+    width: 390,
     pieHole: 0.4,
   };
 

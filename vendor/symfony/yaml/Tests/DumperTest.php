@@ -14,6 +14,7 @@ namespace Symfony\Component\Yaml\Tests;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Dumper;
 use Symfony\Component\Yaml\Parser;
+use Symfony\Component\Yaml\Tag\TaggedValue;
 use Symfony\Component\Yaml\Yaml;
 
 class DumperTest extends TestCase
@@ -75,6 +76,35 @@ foobar:
 
 EOF;
         $this->assertEquals($expected, $dumper->dump($this->array, 4, 0));
+    }
+
+    /**
+     * @group legacy
+     */
+    public function testSetIndentation()
+    {
+        $this->dumper->setIndentation(7);
+
+        $expected = <<<'EOF'
+'': bar
+foo: '#bar'
+'foo''bar': {  }
+bar:
+       - 1
+       - foo
+foobar:
+       foo: bar
+       bar:
+              - 1
+              - foo
+       foobar:
+              foo: bar
+              bar:
+                     - 1
+                     - foo
+
+EOF;
+        $this->assertEquals($expected, $this->dumper->dump($this->array, 4, 0));
     }
 
     public function testSpecifications()
@@ -184,6 +214,16 @@ EOF;
         $this->assertEquals('{ foo: !php/object \'O:30:"Symfony\Component\Yaml\Tests\A":1:{s:1:"a";s:3:"foo";}\', bar: 1 }', $dump, '->dump() is able to dump objects');
     }
 
+    /**
+     * @group legacy
+     */
+    public function testObjectSupportEnabledPassingTrue()
+    {
+        $dump = $this->dumper->dump(['foo' => new A(), 'bar' => 1], 0, 0, false, true);
+
+        $this->assertEquals('{ foo: !php/object \'O:30:"Symfony\Component\Yaml\Tests\A":1:{s:1:"a";s:3:"foo";}\', bar: 1 }', $dump, '->dump() is able to dump objects');
+    }
+
     public function testObjectSupportDisabledButNoExceptions()
     {
         $dump = $this->dumper->dump(['foo' => new A(), 'bar' => 1]);
@@ -197,6 +237,33 @@ EOF;
     public function testObjectSupportDisabledWithExceptions()
     {
         $this->dumper->dump(['foo' => new A(), 'bar' => 1], 0, 0, Yaml::DUMP_EXCEPTION_ON_INVALID_TYPE);
+    }
+
+    /**
+     * @group legacy
+     * @expectedException \Symfony\Component\Yaml\Exception\DumpException
+     */
+    public function testObjectSupportDisabledWithExceptionsPassingTrue()
+    {
+        $this->dumper->dump(['foo' => new A(), 'bar' => 1], 0, 0, true);
+    }
+
+    public function testEmptyArray()
+    {
+        $dump = $this->dumper->dump([]);
+        $this->assertEquals('{  }', $dump);
+
+        $dump = $this->dumper->dump([], 0, 0, Yaml::DUMP_EMPTY_ARRAY_AS_SEQUENCE);
+        $this->assertEquals('[]', $dump);
+
+        $dump = $this->dumper->dump([], 9, 0, Yaml::DUMP_EMPTY_ARRAY_AS_SEQUENCE);
+        $this->assertEquals('[]', $dump);
+
+        $dump = $this->dumper->dump(new \ArrayObject(), 0, 0, Yaml::DUMP_EMPTY_ARRAY_AS_SEQUENCE | Yaml::DUMP_OBJECT_AS_MAP);
+        $this->assertEquals('{  }', $dump);
+
+        $dump = $this->dumper->dump(new \stdClass(), 0, 0, Yaml::DUMP_EMPTY_ARRAY_AS_SEQUENCE | Yaml::DUMP_OBJECT_AS_MAP);
+        $this->assertEquals('{  }', $dump);
     }
 
     /**
@@ -367,6 +434,94 @@ outer2:
     inner1: b
     inner2: c
     inner3: { deep1: d, deep2: e }
+
+YAML;
+        $this->assertSame($expected, $yaml);
+    }
+
+    public function testDumpingTaggedValueSequenceRespectsInlineLevel()
+    {
+        $data = [
+            new TaggedValue('user', [
+                'username' => 'jane',
+            ]),
+            new TaggedValue('user', [
+                'username' => 'john',
+            ]),
+        ];
+
+        $yaml = $this->dumper->dump($data, 2);
+
+        $expected = <<<YAML
+- !user
+  username: jane
+- !user
+  username: john
+
+YAML;
+        $this->assertSame($expected, $yaml);
+    }
+
+    public function testDumpingTaggedValueSequenceWithInlinedTagValues()
+    {
+        $data = [
+            new TaggedValue('user', [
+                'username' => 'jane',
+            ]),
+            new TaggedValue('user', [
+                'username' => 'john',
+            ]),
+        ];
+
+        $yaml = $this->dumper->dump($data, 1);
+
+        $expected = <<<YAML
+- !user { username: jane }
+- !user { username: john }
+
+YAML;
+        $this->assertSame($expected, $yaml);
+    }
+
+    public function testDumpingTaggedValueMapRespectsInlineLevel()
+    {
+        $data = [
+            'user1' => new TaggedValue('user', [
+                'username' => 'jane',
+            ]),
+            'user2' => new TaggedValue('user', [
+                'username' => 'john',
+            ]),
+        ];
+
+        $yaml = $this->dumper->dump($data, 2);
+
+        $expected = <<<YAML
+user1: !user
+    username: jane
+user2: !user
+    username: john
+
+YAML;
+        $this->assertSame($expected, $yaml);
+    }
+
+    public function testDumpingTaggedValueMapWithInlinedTagValues()
+    {
+        $data = [
+            'user1' => new TaggedValue('user', [
+                'username' => 'jane',
+            ]),
+            'user2' => new TaggedValue('user', [
+                'username' => 'john',
+            ]),
+        ];
+
+        $yaml = $this->dumper->dump($data, 1);
+
+        $expected = <<<YAML
+user1: !user { username: jane }
+user2: !user { username: john }
 
 YAML;
         $this->assertSame($expected, $yaml);

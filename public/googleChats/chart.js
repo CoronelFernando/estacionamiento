@@ -7,7 +7,7 @@ obtenerEstadisticasArea();
 window.setInterval("obtenerEstadisticasArea()", 8000);
 function obtenerEstadisticasArea(){
     var xml = new XMLHttpRequest();
-    xml.open('GET', 'estadisticas/estadisticasGrafica', true);
+    xml.open('GET', 'estadisticas/estadisticasGrafica', false);
     xml.addEventListener('load', function(){
     jsonData = JSON.parse(xml.responseText);
     obtenerEstadisticasHora();

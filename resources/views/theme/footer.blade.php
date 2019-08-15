@@ -1,12 +1,6 @@
-
 <div class="container my-auto">
-  <!--<div class="copyright text-center my-auto">
-    <a href="#">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="#">Support</a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="#">Contact</a>
-  </div><br>-->
   <div class="copyright text-center my-auto">
-    <span>Copyright © Smart Parking 2019 All rights reserved</span>
+    <span>Copyright &copy; Pop! Things 2019</span>
   </div>
 </div>
           
@@ -26,7 +20,7 @@
 <script type="text/javascript" src="{{url('/croquis/js/herramientas.js')}}"></script>
 <script type="text/javascript" src="{{url('/croquis/js/mapas.js')}}"></script>
 <script type="text/javascript" src="{{url('/js/global/historial.js')}}"></script>
-<script type="text/javascript" src="{{url('/googleChats/donutChart.js')}}"></script>
+<!--<script type="text/javascript" src="{{url('/googleChats/donutChart.js')}}"></script>-->
 <script type="text/javascript" src="{{url('/js/global/reservados.js')}}"></script>
 
 

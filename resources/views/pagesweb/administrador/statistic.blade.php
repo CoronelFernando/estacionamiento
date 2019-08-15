@@ -11,9 +11,6 @@
           <li class="breadcrumb-item active">Statistics</li>
         </ol>
         <div class="card mb-3">
-          <div class="card-header">
-            Stadistics
-          </div>
           <div class="card-body">
             <div class="row">
               <div class="clearfix"></div>
@@ -23,7 +20,6 @@
             </div>
           </div>
         </div> 
-        <div class="card-footer small text-muted">Update yesterday at 11:59 PM</div>
       </div>
     </div>
   </div>				

@@ -45,3 +45,7 @@ Route::get('estadisticas/areaChart', 'EstadisticasController@areaChart');
 Route::get('historial', 'HistorialController@index');
 Route::post('historial/allHistorial', 'HistorialController@showHistorial');
 Route::get('historial/list', 'HistorialController@list');
+
+
+// Pagina de configuracion
+Route::get('configuracion', 'ConfiguracionController@index');
