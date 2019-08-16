@@ -33,7 +33,7 @@ function drawer(width, height, id, status, orientation){
   var drawer = document.createElementNS(ns, 'rect');
   drawer.setAttributeNS(null, 'width', '100%');
   drawer.setAttributeNS(null, 'height', '100%');
-  drawer.setAttributeNS(null, 'fill', '#9E9E9E');
+  drawer.setAttributeNS(null, 'fill', '#7c7575');
   //if(status == 1) drawer.setAttributeNS(null, 'fill', '#E4E4E4'); //verde/disponible
   //else if (status == 2) drawer.setAttributeNS(null, 'fill', '#ff6b6b'); //rojo/no disponible
   //else if (status == 3) drawer.setAttributeNS(null, 'fill', '#0984e3'); //Azul/no disponible
@@ -108,7 +108,7 @@ function lineasAmarillas(width, height, id){
   var lineaAmarilla = document.createElementNS(ns, 'rect');
   lineaAmarilla.setAttributeNS(null, 'width', '100%');
   lineaAmarilla.setAttributeNS(null, 'height', '100%');
-  lineaAmarilla.setAttributeNS(null, 'fill', '#B9BDBE');
+  lineaAmarilla.setAttributeNS(null, 'fill', '#ffb961');
   //lineaAmarilla.setAttributeNS(null, 'rx', '0');
   //lineaAmarilla.setAttributeNS(null, 'ry', '0');
   svg.appendChild(lineaAmarilla);
@@ -148,7 +148,7 @@ function banqueta(width, height, id){
   var banqueta = document.createElementNS(ns, 'rect');
   banqueta.setAttributeNS(null, 'width', '100%');
   banqueta.setAttributeNS(null, 'height', '100%');
-  banqueta.setAttributeNS(null, 'fill', '#EBEFF2');  
+  banqueta.setAttributeNS(null, 'fill', '#ffb961');  
   svg.appendChild(banqueta);
   divbanqueta.appendChild(svg);
 
@@ -165,7 +165,7 @@ function edificio(width, height, id){
   var edificio = document.createElementNS(ns, 'rect');
   edificio.setAttributeNS(null, 'width', '100%');
   edificio.setAttributeNS(null, 'height', '100%');
-  edificio.setAttributeNS(null, 'fill', '#E4E4E4');
+  edificio.setAttributeNS(null, 'fill', '#dfd3c3');
   svg.appendChild(edificio);
   divedificio.appendChild(svg);
 
@@ -185,7 +185,7 @@ function calles(width, height, id, estado){
   var calle = document.createElementNS(ns, 'rect');
   calle.setAttributeNS(null, 'width', '100%');
   calle.setAttributeNS(null, 'height', '100%');
-  calle.setAttributeNS(null, 'fill', '#b0bec5');
+  calle.setAttributeNS(null, 'fill', '#7c7575');
   svg.appendChild(calle);
   divCalles.appendChild(svg);
 
