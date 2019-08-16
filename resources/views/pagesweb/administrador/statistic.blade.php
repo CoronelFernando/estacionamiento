@@ -1,46 +1,67 @@
 @extends('layouts.layout')
 @section('content')
-<form>
-  <div id="wrapper">
-    <div id="content-wrapper">
-      <div class="container-fluid">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-          </li>
-          <li class="breadcrumb-item active">Statistics</li>
-        </ol>
-        <div class="card mb-3">
-          <div class="card-body">
-            <div class="row">
-              <div class="clearfix"></div>
-              <div class="col-md-12">
-                <div id="chart_div" class="chart">
-              </div>
-            </div>
+<div class="d-sm-flex aling-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+</div>
+<div class="row">
+  <!--card-->
+  <div class="col-xl-6 col-md-6 mb-4">
+    <div class="card border-left-warning shadow h-100 py-2">
+      <div class="card-body">
+        <div class="row no-gutters aling-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Users</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">1,000</div>
           </div>
-        </div> 
+          <div class="col-auto">
+            <i class="fas fa-users fa-2x text-gray-300"></i>
+          </div>
+        </div>
       </div>
     </div>
-  </div>				
   </div>
-</form>
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                      <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                      <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                      <a class="btn btn-primary" href="login.html">Logout</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        <!--https://developers.google.com/chart/interactive/docs/gallery/areachart-->
+  <div class="col-xl-6 col-md-6 mb-4">
+    <div class="card border-left-info shadow h-100 py-2">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Capacity</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">50%</div>
+          </div>
+          <div class="col-auto">
+            <i class="fas fa-car fa-2x text-gray-300"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--graficas-->
+  <div class="col-xl-4 col-lg-7">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h6 class="m-0 font-weight-bold text-primary">Parking Status</h6>
+        <div id="donutchart"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xl-8 col-lg-7">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h6 class="m-0 font-weight-bold text-primary">Parking Status</h6>
+        <div id="chart_div"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<script type="text/javascript" src="{{url('https://www.gstatic.com/charts/loader.js')}}"></script>     
+<script type="text/javascript" src="{{url('/googleChats/chart.js')}}"></script>
+<script type="text/javascript" src="{{url('/googleChats/donutChart.js')}}"></script>      
+        
+
+    				
+  
+
+        
 @endsection

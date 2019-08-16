@@ -1,32 +1,26 @@
 @extends('layouts.layout')
 @section('content')
-<form>
-  <div id="wrapper">
-    <div id="content-wrapper">
-      <div class="container-fluid">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-          </li>
-          <li class="breadcrumb-item active">Statistics</li>
-        </ol>
-        <hr>
-        <table id="dtHistorialCajon" class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Cajon</th>
-              <th>Seccion</th>
-              <th>Disponibilidad</th>
-              <th>Fecha</th>
-              <th>Hora</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-      </div>
+<div class="d-sm-flex aling-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">History</h1>
+</div>
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dtHistorialCajon" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Space</th>
+                        <th>Seccion</th>
+                        <th>Available</th>
+                        <th>Date</th>
+                        <th>Hours</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
     </div>
-  </div>				
-  </div>
-</form>
+</div>
+
+<script type="text/javascript" src="{{url('/js/global/historial.js')}}"></script>
 @endsection
+
