@@ -3,9 +3,19 @@
 
 <head>
   @include('theme.head')
+  <script src="{{url('js/app.js')}}"></script>
+  <script src="{{url('vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{url('js/jquery.easing.min.js')}}"></script>
+  <script src="{{url('js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url('js/jquery.dataTables.js')}}"></script>
+  <script src="{{url('js/dataTables.bootstrap4.js')}}"></script>
+  <script src="{{url('js/datatables-demo.js')}}"></script>
+
 </head>
 
 <body id="page-top">
+<!--token no eliminar-->
+<input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
   <!-- Page Wrapper -->
   <div id="wrapper">
   <!--sidebar-->
@@ -56,21 +66,14 @@
   </div>
 
   <!--script-->
-<script src="{{url('js/app.js')}}"></script>
-<script src="{{url('js/jquery.min.js')}}"></script>
-<script src="{{url('js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{url('js/jquery.easing.min.js')}}"></script>
-<script src="{{url('js/jquery.dataTables.js')}}"></script>
-<script src="{{url('js/dataTables.bootstrap4.js')}}"></script>
+
+<!--<script src="{{url('js/jquery.min.js')}}"></script>-->
+
 <!--script src="{{url('js/sb-admin.min.js')}}"></script-->
-<script src="{{url('js/datatables-demo.js')}}"></script>
 
 
-
-
-<script src="{{url('vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{url('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{url('vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+<!--<script src="{{url('vendor/jquery-easing/jquery.easing.min.js')}}"></script>-->
 <script src="{{url('js/sb-admin-2.min.js')}}"></script>
 
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>

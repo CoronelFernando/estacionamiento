@@ -43,14 +43,17 @@ function drawer(width, height, id, status, orientation){
   
 
   // SVG CAR
-  if(status == 1) svg.appendChild(drawCarLayout(id, '#B4B4B4', new Point(20,50)));
-  if(status == 2) svg.appendChild(drawCarLayout(id, '#ff0000', new Point(20,50)));
-  if(status == 3) svg.appendChild(drawCarLayout(id, '#0984e3', new Point(20,50)));
-  svg.appendChild(drawPrincipalGlass('top', new Point(20,50)));
-  svg.appendChild(drawPrincipalGlass('bottom', new Point(20,50)));
-  svg.appendChild(drawLateralGlass('left', new Point(20,50)));
-  svg.appendChild(drawLateralGlass('right', new Point(20,50)));
-  drawFrontLights(svg,new Point(20,50));
+  if(status != 1){
+    //if(status == 1) svg.appendChild(drawCarLayout(id, '#B4B4B4', new Point(20,50)));
+    if(status == 2) svg.appendChild(drawCarLayout(id, '#ff0000', new Point(20,50)));
+    if(status == 3) svg.appendChild(drawCarLayout(id, '#0984e3', new Point(20,50)));
+    svg.appendChild(drawPrincipalGlass('top', new Point(20,50)));
+    svg.appendChild(drawPrincipalGlass('bottom', new Point(20,50)));
+    svg.appendChild(drawLateralGlass('left', new Point(20,50)));
+    svg.appendChild(drawLateralGlass('right', new Point(20,50)));
+    drawFrontLights(svg,new Point(20,50));
+  }
+  
   divDrawer.appendChild(svg, new Point(20,50));
   //divDrawer.appendChild(iconCar('prueba','#FFFF00',new Point(100,100),'100px','100px'));
   return divDrawer;

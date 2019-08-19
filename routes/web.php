@@ -32,6 +32,7 @@ Route::post('estadisticas/DesplegarCajones', 'CajonControlller@allCajones');
 Route::post('estadisticas/numeroOcupados', 'EstadisticasController@desplegarNumeroOcupados');
 Route::get('estadisticas/estadisticasGrafica', 'EstadisticasController@estadisticasParaGrafica');
 Route::get('estadisticas/estadisticasGraHor', 'EstadisticasController@estParaGraHor');
+Route::get('estadisticas/estadisticasCapacidad', 'EstadisticasController@estacionamientoCapacidad');
 
 // Pagina de reservacion
 Route::get('reservados', 'ReservadoControlller@index');

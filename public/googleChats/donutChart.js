@@ -1,5 +1,5 @@
 google.charts.load("current", {packages:["corechart"]});
-google.charts.setOnLoadCallback(drawChart);
+google.charts.setOnLoadCallback(drawChartPie);
 var jsonData;
 obtenerEstadisticas();
 window.setInterval("obtenerEstadisticas()", 8000);

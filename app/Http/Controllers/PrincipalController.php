@@ -37,9 +37,9 @@ class PrincipalController extends Controller
 
     public function pieChart(){
     	$ocupadosHora = DB::table('cajones')->select(
-	    DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 1) AS disponibles'),
-	    DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 2) AS ocupados'),
-	    DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 3) AS reservados'))
+	    DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 1 AND caj_id in (1,2,3,4,5)) AS disponibles'),
+	    DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 2 AND caj_id in (1,2,3,4,5)) AS ocupados'),
+	    DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 3 AND caj_id in (1,2,3,4,5)) AS reservados'))
 	    ->get()->toJson();
 	    return $ocupadosHora;
     }

@@ -95,9 +95,9 @@ class EstadisticasController extends Controller
      ->count()
      ->union($fechaYHora)->get()->toJson();*/
      $ocupadosEstado = DB::table('estadisticascajones')->select(
-      DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 1) AS disponibles'),
-      DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 2) AS ocupados'),
-      DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 3) AS reservados'))
+      DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 1 AND caj_id in (1,2,3,4,5)) AS disponibles'),
+      DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 2 AND caj_id in (1,2,3,4,5)) AS ocupados'),
+      DB::raw('(SELECT COUNT(caj_id) FROM cajones WHERE caj_status_id = 3 AND caj_id in (1,2,3,4,5)) AS reservados'))
       //DB::raw('estCaj_horaFin AS hora'))
      ->limit(10)
      ->orderby('estCaj_fechaFin', 'DESC')
@@ -113,6 +113,17 @@ class EstadisticasController extends Controller
     ->orderby('estCaj_id', 'DESC')
     ->get()->toJson();
     return $ocupadosHora;
+  }
+
+  public function estacionamientoCapacidad(){
+    $capacidad = DB::table('cajones')->select('cajon_id')
+    ->where('caj_status_id', 1)
+    ->whereIn('caj_id', [1,2,3,4,5])
+    ->count();
+    
+    $capacidad = ($capacidad/5)*100;
+
+    return $capacidad;
   }
 
 }

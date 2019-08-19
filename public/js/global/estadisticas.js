@@ -9,6 +9,8 @@ barraLlena.style.display = 'none'; //barraVacia.style.display = 'none';
 var inputSearch = document.getElementById('txtsearchCajon'); var lblOcupadosNumero = document.getElementById('lblOcupadosNumero');
 var lblOcupadosHora = document.getElementById('lblOcupadosHora');
 
+//loadDocument();
+
 function loadDocument(){
   //desplegarCajones();
   /*var refreshId =  setInterval( function(){
@@ -20,7 +22,7 @@ function loadDocument(){
     //$('#tbodyEstadisticas').load('estadisticas/tablaCajones');
   }, 5000 );*/
     //window.setInterval("desplegarCajones()", 1000);
-    //window.setInterval("desplegarNumeroOcupados()", 1000);
+    //window.setInterval("desplegarCapacidad()", 500);
 }
 
 

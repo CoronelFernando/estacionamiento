@@ -4,7 +4,10 @@ var jsonData;
 var jsonDataHora;
 //OBTIENE EL ESTADOS DE LOS CAJONES
 obtenerEstadisticasArea();
-window.setInterval("obtenerEstadisticasArea()", 8000);
+desplegarCapacidad();
+window.setInterval("obtenerEstadisticasArea()", 6000);
+window.setInterval("desplegarCapacidad()", 500);
+
 function obtenerEstadisticasArea(){
     var xml = new XMLHttpRequest();
     xml.open('GET', 'estadisticas/estadisticasGrafica', false);
@@ -39,12 +42,13 @@ function drawChart() {
       ]);
 
     var options = {
-        'title':'Cantida de Cajones por Hora',
+        'title':'Drawers status per hour',
         'colors': ['#64D4C7', '#F99797', '#B07CDA'],
         'height': 370,
         hAxis: {title: 'Horario', minValue: 0, maxValue: 4},
         vAxis: {title: 'Cajones Utilizados',  minValue: 0,
-            ticks: [0, 2, 4, 6, 8, 10, 12]}
+            //ticks: [0, 2, 4, 6, 8, 10, 12]}
+            ticks: [0, 1, 2, 3, 4, 5]}
         
     };
 
@@ -56,3 +60,14 @@ function drawChart() {
     drawChart();
 });*/
 
+function desplegarCapacidad(){
+  var formData = new FormData();
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'estadisticas/estadisticasCapacidad');
+  xhr.addEventListener('load', function(){
+    //var jsonData = JSON.parse(xhr.responseText);
+    var jsonData = xhr.responseText;
+    document.getElementById('lblCapacity').textContent = jsonData + '%';
+  });
+  xhr.send(formData);
+}
